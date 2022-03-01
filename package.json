@@ -34,5 +34,17 @@
   },
   "engines": {
     "node": ">=14"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielaRomeroMolina/SCL019-social-network.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/GabrielaRomeroMolina/SCL019-social-network/issues"
+  },
+  "homepage": "https://github.com/GabrielaRomeroMolina/SCL019-social-network#readme"
 }
