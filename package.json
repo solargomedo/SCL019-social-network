@@ -38,13 +38,16 @@
   "directories": {
     "test": "test"
   },
+  "dependencies": {
+    "firebase": "^9.6.7"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GabrielaRomeroMolina/SCL019-social-network.git"
+    "url": "git+https://github.com/solargomedo/SCL019-social-network.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/GabrielaRomeroMolina/SCL019-social-network/issues"
+    "url": "https://github.com/solargomedo/SCL019-social-network/issues"
   },
-  "homepage": "https://github.com/GabrielaRomeroMolina/SCL019-social-network#readme"
+  "homepage": "https://github.com/solargomedo/SCL019-social-network#readme"
 }
