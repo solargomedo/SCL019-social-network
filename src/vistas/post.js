@@ -2,6 +2,7 @@ const post = (element) => {
     const commentBox = document.createElement('div');
     commentBox.className = 'comment-box';
     const formularioPost = `<form id = "formularioPost" class = "formularioPost">
+    <div id="container_comment" class="container-comment">
       <div id="${element.id}" class="post-id">
         <div id="user_name" class="user-name">${element.name}</div>   
         <div id="title_comment" class="title-comment">${element.title}</div>
