@@ -1,8 +1,8 @@
-import { loginUser } from '../vistas/login.js';
-import { registerUser } from '../vistas/register.js';
+import { login } from '../vistas/login.js';
+import { register } from '../vistas/register.js';
 import { home } from '../vistas/home.js';
 
-export const changeRoute = (hash) => {
+export const routes = (hash) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
 
@@ -11,10 +11,10 @@ export const changeRoute = (hash) => {
     case '#':
     case '#/':
     case '#/login':
-      root.appendChild(loginUser());
+      root.appendChild(login());
       break;
     case '#/register':
-      root.appendChild(registerUser());
+      root.appendChild(register());
       break;
     case '#/home':
       root.appendChild(home());
