@@ -4,20 +4,11 @@
 //import { myFunction } from "./lib/index.js";
 
 //myFunction();
-
+import { routes } from '../lib/routes.js';
 
 const infoContainer = document.createElement('div');
   infoContainer.className = 'infoContainer';
   document.getElementById('root').appendChild(infoContainer);
-
-
-  // Ubicacion del texto REGISTRO
-  const registerText = document.createElement('div');
-  registerText.className = 'registerText';
-  registerText.textContent = 'REGISTER';
-
-  infoContainer.appendChild(registerText);
-
   
   // Creacion de los campos de texto
 
@@ -59,3 +50,9 @@ const infoContainer = document.createElement('div');
     }
   });
 
+// Al terminar de cargar la página(Event Load) se ejecuta la función INIT.
+// window.addEventListener('load', init);
+
+window.addEventListener('hashchange', () => {
+  routes(hash);
+});
