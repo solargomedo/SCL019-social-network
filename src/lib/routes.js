@@ -1,30 +1,38 @@
 import { login } from '../vistas/login.js';
-import { register } from '../vistas/register.js';
+/*import { register } from '../vistas/register.js';*/
+/*import { post } from '../vistas/post.js';*/
 import { home } from '../vistas/home.js';
 
-export const routes = (hash) => {
-  const root = document.getElementById('root');
-  root.innerHTML = '';
+const showTemplate = (hash) =>{
+ 
+  const router = hash.substring(0);
+  const containerRoot =
+      document.getElementById('root');
+  containerRoot.innerHTML = '';
 
-  switch (hash) {
-    case '':
-    case '#':
-    case '#/':
-    case '#/login':
-      root.appendChild(login());
-      break;
-    case '#/register':
-      root.appendChild(register());
-      break;
-    case '#/home':
-      root.appendChild(home());
-      break;
-    default:
-      alert('¡Ups, parece que te has equivocado!');
+  console.log("valor = " + window.location);
+  switch (router) {
+
+      case '#home':
+          containerRoot.appendChild(home())
+          break;
+      case '#login':
+          containerRoot.appendChild(login())
+          break;
+      default:
+        console.log("valor = " + router);
+          containerRoot.innerHTML = `<p> Error 404 + router </p>`
   }
-};
+}
+
+export const initRouter = () => {
+  window.addEventListener('load', showTemplate(window.location.hash));
+  if ('onhashchange' in window) {
+      window.onhashchange = () => {
+          showTemplate(window.location.hash);
+      }
+  }
+}
 
 
 
-
-document.getElementById('root').appendChild(infoContainer);

@@ -1,5 +1,5 @@
 
-export const loginUser = ()=>{
+export const login = ()=>{
     const viewLogin = document.createElement("div");
     const formularioLogin = `<form id = "formularioRegistro" class = "formularioRegistro">
     <div class= "email> Email </div>

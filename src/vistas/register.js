@@ -6,4 +6,9 @@ registerText.textContent = 'REGISTER';
 infoContainer.appendChild(registerText);
 
  
+  export const register =  () => {
+
+  }
+
+
   
