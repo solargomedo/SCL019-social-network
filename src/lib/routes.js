@@ -1,4 +1,3 @@
-//import { login } from '../vistas/login.js';
 import { register } from '../vistas/register.js';
 /*import { post } from '../vistas/post.js';*/
 import { home } from '../vistas/home.js';
