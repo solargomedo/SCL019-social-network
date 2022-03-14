@@ -1,45 +1,113 @@
 body{
-    background-color: #85e9d8;
-    
-    font-family: 'Fira Code', monospace;
-    }
-#root{
-    display: flex;
-    
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    border: 2em solid #69D4CD;
+    border-radius: 10px;
 }
 
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+   
+}
+
+.userData{
+    display: flex;
+    border-radius: 10px;
+    
+    
+
+
+}
+.titulo{
+    background-color: rgb(231, 231, 82);
+    color: white;
+    padding: 0.2em;
+    font-size: 3em;
+    
+
+}
 .FormLogin, .loginFormLogin{
     margin-left: 10px;
 }
-.name, .nickName, .email, .password{
+
+
+.name, 
+.nickName, 
+.email, 
+.password{
     font-size: 1.3em;
-    margin: 12px; 
+    margin: 9px; 
     color: rgb(15, 14, 14);
 }
-.registerNameLogin, .nickNameLogin, .emailLogin, .passwordLogin{
-    font-family:'Fira Code', monospace;
+.registerNameLogin, 
+.nickNameLogin, 
+.emailLogin, 
+.passwordLogin{
     display: flex;
-    font-size: 1em;
+    text-align: justify;
     padding: 5px;
-    border: 2px solid;
-    border-radius: 7px;
+    border: 1px solid;
+    border-radius: 5px;
     border-color: #050f02;
-    background-color: #ecdb7a;
     outline:none;
-    margin: 7px;  
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.submit-register{
+    display: flex;
+    text-align: center;
+    margin: 2em;
+    padding: 5px;
+    background-color: #69D4CD;
+    border-color: #69D4CD;
+    border-radius: 5px;
+    width: 9.3125em;
+    height: 2.0625em;
+    
+}
+.boton{
+    display: flex;
+    margin: 2em;
+    padding: 5px;
+    border-radius: 5px;
+    width: 9.3125 em;
+    height: 2.0625em;
+    left: 7.0625em;
+    top: 21.3125em;
+    text-align: center;
+}
+ .registrate{
+     color: blue;
+
+ }
+.imagen{
+    display: flex;
+    width: 4em;
 }
 
-.emailLogin::placeholder{
-    color:#050205;
-    font-style: italic;
-}
-.passwordLogin::placeholder{
-    color:#000000;
-    font-style: italic;
-}
+footer{
+    background: rgb(231, 231, 82);
+    color: white;
+    padding: 0.2em;
+    text-align: center;
+    
 
+}
 
  
 
+
   
+  /* medidas  (mobile 425px)*/
+  @media (max-width: 425px) {
+    body {
+      font-size: 10px;
+      text-align: center;
+      
+    }
+    
+}    
   
