@@ -2,25 +2,14 @@ export const home = ()=>{
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
   const data = `
-  <div class="titulo"> Te apaño </div>
- 
-  <form id="formLogin" class="FormLogin">
-
-  <div class="email"> Correo electrónico </div>
-
+  
   <h1>Te Apaño!</h1>
-  <h2>¡BIENVENIDO!</h2>
-  <div class="email"> Correo </div>
-
+  <form id="formLogin" class="FormLogin">
+  <label class="email"> Correo electrónico </label>
   <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
-  <div class="password"> Contraseña </div>
-  <span class="iconEye"><i id="checkEye" class="fas fa-eye-slash"></i></span>
+  
+  <label class="password"> Contraseña </label>
   <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
-
-  <input type="submit" id="submit-register" class="submit-register" value="Ingresar">
-  <button id="boton" class="boton">Ingresa con Google</button>
-  <div class="registrate"> ¿No tienes cuenta?</div>
-  <button id="boton" class="boton">Registrate</button>
 
   <a href="#post" type="button" id="boton" class="boton">Ingresa</a>
   <a href="#post" type="button" id="boton2" class="boton2">Ingresa con Google</a>
