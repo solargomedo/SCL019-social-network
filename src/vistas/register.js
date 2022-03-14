@@ -20,9 +20,7 @@
 
  window.location.hash = 'register';
  return userData
-
-    return viewLogin
-    }
+}
 
 
   
