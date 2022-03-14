@@ -1,21 +1,45 @@
-const post = (element) => {
-    const commentBox = document.createElement('div');
-    commentBox.className = 'comment-box';
-    const formularioPost = `<form id = "formularioPost" class = "formularioPost">
-    <div id="container_comment" class="container-comment">
-      <div id="${element.id}" class="post-id">
-        <div id="user_name" class="user-name">${element.name}</div>   
-        <div id="title_comment" class="title-comment">${element.title}</div>
-        <div id="description_comment" class="description-comment">${element.description}</div>
+export const post = () => {
+  const userData = document.createElement('div');
+  userData.setAttribute("class", "mainclass");
+  const data = `
+    <main>
+    <section  class= "contentBox">
+    <div class="iconshome">
+    <a span class="icon icon-home3" href="#postPage">Muro</a>
+    <button class="returnBtn" type="submit">
+    <a href="#home" type="button" id="botonpost" class="botonpost">Cerrar cesion</a>
+    </div>
+     
+      <section id="contenedor-perfil" class="contenedor-perfil">
+        <article class="recet">
+          <input type="search" class="textarea" name="textarea" id="postt" 
+            placeholder="¿Cual es tu nombre?"/>
+          <input type="search" class="textarea" name="textarea" id="posttt" 
+            placeholder="Dejanos tu tips saludable"/>
+          <input type="search" class="textarea" name="textarea" id="post" 
+            placeholder="¿Me apañas a entrenar?"/>
+            </article>
+          <button class="botones-post" type="button" id="publicar">Publicar</button>
+    
         
-        <div class="user-icons">
-          
-          <button class="button-like" id="button_like" value="${element.id}">
-            <img id="like_icon" class="like-icon" src="Img/icono-like.png">
-          </button>
-      
-    `;
-    viewpost.innerHtml= formularioPost ;
+    </section>
+    </main>
 
-    return commentBox;
-};
+
+      </section>
+      <section class= "link" >
+      <div class="linkId">
+      <a href="https://www.salesianos.edu/wp-content/uploads/2020/05/Sin-ti%CC%81tulo-13-3.png"><img src=""></a> 
+      
+     </div>
+      </section>
+  
+    </main>
+       </div> `;
+
+  userData.innerHTML = data;
+
+  window.location.hash = 'post';
+  return userData
+
+  }

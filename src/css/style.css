@@ -93,11 +93,37 @@ footer{
     color: white;
     padding: 0.2em;
     text-align: center;
-    
-
+  
 }
 
+.boton {
+    display: flex;
+    font-size: 1em;
+    padding: 1px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: #fbf5f5;
+    margin: 5px; 
+    transition: all 0.5s;
+    cursor: pointer; 
+
+
+}
  
+.boton2 {
+    
+    display: flex;
+    font-size: 1em;
+    padding: 1px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: #f3faf3;
+    margin: 5px;  
+    transition: all 0.5s;
+    cursor: pointer;
+
 
 
   
@@ -110,4 +136,5 @@ footer{
     }
     
 }    
+
   
