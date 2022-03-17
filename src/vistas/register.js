@@ -1,6 +1,7 @@
   import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-  import {app} from "../lib/firebase.js"
-  export const register =  () => {
+  import {app} from "../lib/firebase.js" 
+
+  export const register =  () => {                      //Crea var para realizar registro de datos
 
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
@@ -17,24 +18,25 @@
   </form>
   </div>
   `;
- userData.innerHTML = data;
- let btonRegistro = userData.querySelector('#submit-register');
- btonRegistro.addEventListener('click', () => {
-   registroUsuario();
+ userData.innerHTML = data;                                           // Imprime formulario en html
+
+ let btonRegistro = userData.querySelector('#submit-register');       // llamamos ID de boton register
+ btonRegistro.addEventListener('click', () => {                       // asignamos evento
+   registroUsuario();                                                 // realizar la sgte funcion
  });
 
- window.location.hash = 'register';
+ window.location.hash = 'register';                                   // Ruta register      
  return userData
 }
 
 
 
-const auth = getAuth(app);
-function registroUsuario(){
-  let email = document.getElementById("emailLogin").value;
+const auth = getAuth(app);                                            // autentifica
+function registroUsuario(){                                           // funcion para registro de usuario      
+  let email = document.getElementById("emailLogin").value;                
   let password = document.getElementById("passwordLogin").value;
 
-createUserWithEmailAndPassword(auth, email, password)
+createUserWithEmailAndPassword(auth, email, password)                 // creacion en firebae de usuarios  
 
   .then((userCredential) => {
     // Signed in
