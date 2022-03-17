@@ -3,6 +3,9 @@ body{
     font-family: 'Roboto', sans-serif;
     border: 2em solid #69D4CD;
     border-radius: 10px;
+    margin:0;
+    font-size: 10px;
+    text-align: center;
 }
 
 #root{
@@ -16,16 +19,32 @@ body{
 .userData{
     display: flex;
     border-radius: 10px;
-    
-    
-
-
+}    
+.header{
+    display: inline-flex;
+    /* text-align: center; */
+    align-items: center;
+    width: 20em; 
+    height: 4em;   
+    background-color: #EAF28B;
+    margin: 10px 10px;
+    border-radius: 5px;
 }
-.titulo{
-    background-color: rgb(231, 231, 82);
+
+.logo{
+    width: 15%;
+    float:left;
+    filter: brightness(1.1);
+    mix-blend-mode:multiply;
+    padding-left: 0.8em;
+    padding-top: 0.3em;
+}
+
+
+h1{
     color: white;
-    padding: 0.2em;
-    font-size: 3em;
+    font-size: 2.8em;
+    padding-left: 0.5em;
     
 
 }
@@ -41,21 +60,35 @@ body{
     font-size: 1.3em;
     margin: 9px; 
     color: rgb(15, 14, 14);
+    flex-direction: column;
+    display: block;
+   
 }
 .registerNameLogin, 
 .nickNameLogin, 
 .emailLogin, 
 .passwordLogin{
-    display: flex;
-    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    /* display: flex;
+    text-align: justify;  */
     padding: 5px;
     border: 1px solid;
-    border-radius: 5px;
     border-color: #050f02;
     outline:none;
     box-sizing: border-box;
     border-radius: 5px;
-}
+    flex-direction: column;
+    
+
+
+
+}    
+
+
+
+
+
 .submit-register{
     display: flex;
     text-align: center;
@@ -69,24 +102,40 @@ body{
     
 }
 .boton{
-    display: flex;
+    display: inline-flex;
     margin: 2em;
-    padding: 5px;
+    background-color: #69D4CD;
+    border-color: #69D4CD;
     border-radius: 5px;
-    width: 9.3125 em;
+    width: 9.3125em;
     height: 2.0625em;
-    left: 7.0625em;
-    top: 21.3125em;
-    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
 }
- .registrate{
-     color: blue;
-
- }
-.imagen{
+ 
+.boton2 {
     display: flex;
-    width: 4em;
+    font-size: 1em;
+    padding: 1px;
+    border: none;
+    margin: 5px;  
+    transition: all 0.5s;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
+ p{
+     color: blue;
+     font-size: 2em;
+}
+
+a{
+    text-decoration: none;
+}
+/* .imagen{
+    display: flex;
+    width: 4em; */
+
 
 footer{
     background: rgb(231, 231, 82);
@@ -96,44 +145,30 @@ footer{
   
 }
 
-.boton {
+
+
+
+
+
+.imagen{
     display: flex;
-    font-size: 1em;
-    padding: 1px;
-    border: 1px solid;
-    border-radius: 5px;
-    border-color: #000000;
-    background-color: #fbf5f5;
-    margin: 5px; 
-    transition: all 0.5s;
-    cursor: pointer; 
-
-
+    align-items: center;
+    justify-content: center;
+    margin-top: 10em;
+    width: 25em;
+    height: 25em;
 }
- 
-.boton2 {
-    
-    display: flex;
-    font-size: 1em;
-    padding: 1px;
-    border: 1px solid;
-    border-radius: 5px;
-    border-color: #000000;
-    background-color: #f3faf3;
-    margin: 5px;  
-    transition: all 0.5s;
-    cursor: pointer;
 
-
-
+img{
+    width: 100%;
+}
   
   /* medidas  (mobile 425px)*/
-  @media (max-width: 425px) {
+  @media (min-width: 450px) {
     body {
-      font-size: 10px;
+      font-size: 16px;
       text-align: center;
       
     }
     
 }    
-}

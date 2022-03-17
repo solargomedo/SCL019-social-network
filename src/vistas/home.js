@@ -2,8 +2,15 @@ export const home = ()=>{
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
   const data = `
-  
-  <h1>Te Apaño!</h1>
+
+  <div class = "header">
+    <div class="logo">
+      <img class= "imgResponsive" src="../Imagenes/mano1.png">  </div>
+       <h1>Te Apaño!</h1>
+  </div>
+
+
+ 
   <form id="formLogin" class="FormLogin">
   <label class="email"> Correo electrónico </label>
   <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
@@ -17,6 +24,7 @@ export const home = ()=>{
   <a href="#register" type="button" id="boton2" class="boton2">Registrate</a>
 
   </form>
+  
   <div class="imagen">
   <img src="../Imagenes/deportesvec.jpg"> </div>
     
