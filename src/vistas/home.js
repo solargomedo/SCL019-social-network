@@ -18,7 +18,7 @@ export const home = ()=>{
 
   </form>
   <div class="imagen">
-  <img src="../Imagenes/deportesvec.jpg"> </div>
+  <img src="../Imagenes/deportesvec.jpg"></div>
     
   </div>
   `;

@@ -4,10 +4,10 @@ import { home } from '../vistas/home.js';
 
 const showTemplate = (hash) => {
 
-  const router = hash.substring(0);
+  const router = hash.substring(0); //¿que es esto?
   const containerRoot =
     document.getElementById('root');
-  containerRoot.innerHTML = '';
+    containerRoot.innerHTML = '';
 
   console.log("valor = " + router);
   switch (router) {
@@ -22,8 +22,8 @@ const showTemplate = (hash) => {
       break;
 
     case '#post':
-        containerRoot.appendChild(post())
-        break;
+      containerRoot.appendChild(post())
+      break;
 
     default:
       console.log("valor = " + router);
