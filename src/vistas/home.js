@@ -1,4 +1,8 @@
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+import {app} from "../lib/firebase.js" 
+import { register } from "./register.js";
+//import { auth } from "./register";
+
 export const home = ()=>{
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
@@ -9,43 +13,51 @@ export const home = ()=>{
       <img class= "imgResponsive" src="../Imagenes/mano1.png">  </div>
        <h1>Te Apaño!</h1>
   </div>
-
-
  
   <form id="formLogin" class="FormLogin">
-  <label class="email"> Correo electrónico </label>
-  <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
-  
-  <label class="password"> Contraseña </label>
-  <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
+    <label class="email"> Correo electrónico </label>
+    <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
+ 
+    <label class="password"> Contraseña </label>
+    <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
 
-  <button type="button" id="boton" class="boton">Ingresa</button>
-  <button type="button" id="botonGoogle" class="boton2">Ingresa con Google</button>
-  <p>¿No tienes cuenta?</p>
-  <a href="#register" type="button" id="boton2" class="boton2">Registrate</a>
-
-
+    <button type="button" id="boton" class="boton">Ingresa</button>
+    <button type="button" id="botonGoogle" class="boton2">Ingresa con Google</button>
+      <p>¿No tienes cuenta?</p>
+    <butoon type="button" id="boton2" class="boton2">Registrate</button>
   </form>
   
   <div class="imagen">
-  <img src="../Imagenes/deportesvec.jpg"></div>
-    
+    <img src="../Imagenes/deportesvec.jpg"></div>
   </div>
   `;
+
  userData.innerHTML = data;
- //boton ingreso
+
+ //--------Evento boton para loguearse--------
  let btonRegistro = userData.querySelector('#boton');       
  btonRegistro.addEventListener('click', () => {                       
    login();                                                 
  });
- //Boton para ingresar con Google
+
+ //--------Evento boton para ingresar con Google------------
  let btnGoogle = userData.querySelector('#botonGoogle');
  btnGoogle.addEventListener('click', () =>{
   registerGoogle()
   
  });
 
- //Funcion para ingresar
+  //-------Evento para boton y direccionar a REGISTRATE y nos muestra html para ingresar datos-------------
+  let btn2 = userData.querySelector('#boton2');
+  btn2.addEventListener('click', () =>{
+   register()
+  });
+
+ const auth = getAuth(app);
+ const provider = new GoogleAuthProvider();
+
+
+ //----Función para loguearse----------
  function login(){                                           
   let email = document.getElementById("emailLogin").value;                
   let password = document.getElementById("passwordLogin").value;
