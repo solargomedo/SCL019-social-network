@@ -1,48 +1,52 @@
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-  import {app} from "../lib/firebase.js" 
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+import {app} from "../lib/firebase.js" 
 
-  export const register =  () => {                      //Crea var para realizar registro de datos
+export const register =  () => {                      
 
-  const userData = document.createElement('div');
-  userData.setAttribute("class", "mainclass");
+  const dataRegistrer = document.createElement('div');
+  dataRegistrer.setAttribute("class", "mainclass");
   const data = `
-  <form id="formLogin" class="FormLogin">
-  <div class="name"> Name </div>
-  <input type="text" id="registerNameLogin" class="registerNameLogin" placeholder= "Enter your name"/>
-  <div class="email"> E-mail </div>
-  <input type="email" id="emailLogin" class="emailLogin" placeholder= "Enter e-mail"/>
-  <div class="password"> Password </div>
-  <span class="iconEye"><i id="checkEye" class="fas fa-eye-slash"></i></span>
-  <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Enter password"/>
-  <input type="submit" id="submit-register" class="submit-register" value="Registrate">
-  </form>
-  </div>
-  `;
- userData.innerHTML = data;                                           // Imprime formulario en html
+    <form id="formLogin" class="FormLogin">
+      <label class="name"> Nombre </label>
+      <input type="text" id="registerNameLogin" class="registerNameLogin" placeholder= "Ingresa tu nombre"/>
+      <label class="email"> E-mail </label>
+      <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
+      <label class="password"> Contraseña </label>
+      <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
+      <butoon type="button" id="submit-register" class="boton2">Registrate</button>
+    </form>
+    </div>
+    `;
+ dataRegistrer.innerHTML = data;                                           
 
- let btonRegistro = userData.querySelector('#submit-register');       // llamamos ID de boton register
- btonRegistro.addEventListener('click', () => {                       // asignamos evento
-   registroUsuario();                                                 // realizar la sgte funcion
+
+ //--------Evento boton registrarse
+ let btonRegistro = dataRegistrer.querySelector('#submit-register');       
+ btonRegistro.addEventListener('click', () => {                       
+   registroUsuario();                                                 
  });
 
- window.location.hash = 'register';                                   // Ruta register      
- return userData
+ window.location.hash = 'register';                                        
+ return dataRegistrer
 }
+  
+const auth = getAuth(app);
 
-
-
-const auth = getAuth(app);                                            // autentifica
-function registroUsuario(){                                           // funcion para registro de usuario      
+//---------Registro de usuarios---------
+function registroUsuario(){                                                 
   let email = document.getElementById("emailLogin").value;                
   let password = document.getElementById("passwordLogin").value;
 
-createUserWithEmailAndPassword(auth, email, password)                 // creacion en firebae de usuarios  
+createUserWithEmailAndPassword(auth, email, password)                   
 
   .then((userCredential) => {
-    // Signed in
+    //-- registrado
     const user = userCredential.user;
-    // ...
+    //check(alert('Felicitaciones'))
+    console.log(user)
+    
   })
+  //--no registrado
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -51,3 +55,7 @@ createUserWithEmailAndPassword(auth, email, password)                 // creacio
   });
 }
   
+
+
+
+
