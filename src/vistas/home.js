@@ -17,7 +17,7 @@ export const home = ()=>{
   <form id="formLogin" class="FormLogin">
     <label class="email"> Correo electrónico </label>
     <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
-  
+ 
     <label class="password"> Contraseña </label>
     <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
 
