@@ -50,6 +50,8 @@ export const home = ()=>{
   let email = document.getElementById("emailLogin").value;                
   let password = document.getElementById("passwordLogin").value;
 
+  
+
   //Codigo traido de firebase
   const auth = getAuth();
   signInWithEmailAndPassword(auth, email, password)
@@ -68,7 +70,7 @@ export const home = ()=>{
 }  
 //Ingreso con google firebase
 function registerGoogle(){
-const auth = getAuth();
+//const auth = getAuth();
 signInWithPopup(auth, provider)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
