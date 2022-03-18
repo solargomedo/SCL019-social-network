@@ -80,16 +80,9 @@ h1{
     border-radius: 5px;
     flex-direction: column;
     
-
-
-
 }    
 
-
-
-
-
-.submit-register{
+#submit-register{
     display: flex;
     text-align: center;
     margin: 2em;

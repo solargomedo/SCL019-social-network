@@ -1,6 +1,7 @@
 import { register } from '../vistas/register.js';
 import { post } from '../vistas/post.js';
 import { home } from '../vistas/home.js';
+import { muro } from '../vistas/muro.js';
 
 const showTemplate = (hash) => {
 
@@ -24,6 +25,10 @@ const showTemplate = (hash) => {
     case '#post':
       containerRoot.appendChild(post())
       break;
+
+    case '#muro':
+        containerRoot.appendChild(muro())
+        break;
 
     default:
       console.log("valor = " + router);
