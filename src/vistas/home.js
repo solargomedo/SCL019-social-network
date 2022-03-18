@@ -22,7 +22,8 @@ export const home = ()=>{
   <button type="button" id="boton" class="boton">Ingresa</button>
   <button type="button" id="botonGoogle" class="boton2">Ingresa con Google</button>
   <p>¿No tienes cuenta?</p>
-  <butoon type="button" id="boton2" class="boton2">Registrate</button>
+  <a href="#register" type="button" id="boton2" class="boton2">Registrate</a>
+
 
   </form>
   
