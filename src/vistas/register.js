@@ -17,7 +17,21 @@ export const register =  () => {
     <label class="password"> Contraseña </label>
     <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
     <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
-    </form></div>;`
+    </form>
+    <p class="mensajeErrorRegistro" id="mensajeErrorRegistro" </p>
+
+    </div>   
+    
+    
+    <div id="modal_container" class="modal-container">
+  <div class="modal">
+    <h3>felicidades</h>
+    <p> Ahora debes ingresar hacer inicio de sesión    </p>
+    <button id="close">Ir a home</button>
+  </div>
+</div>;`
+    
+
   
 
 
