@@ -17,8 +17,10 @@ export const register =  () => {
     <label class="password"> Contraseña </label>
     <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
     <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
-    </form></div>;`
-  
+    <p class="mensajeErrorRegistro" id="mensajeErrorRegistro" </p>
+    </form>
+    </div>;`
+   
 
 
  dataRegistrer.innerHTML = data;                                           
