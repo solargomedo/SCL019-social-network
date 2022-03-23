@@ -9,28 +9,26 @@ export const home = ()=>{
   const data = `
 
   <div class = "header">
-    <div class="logo">
-      <img class= "imgResponsive" src="../Imagenes/mano1.png">  </div>
-       <h1>Te Apaño!</h1>
+  <div class="logo">
+    <img class="img" src="../Imagenes/mano1.png">  
   </div>
- 
+  <h1>Te Apaño!</h1>
+  </div>
+  <div class="form">
   <form id="formLogin" class="FormLogin">
-    <label class="email"> Correo electrónico </label>
-    <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
- 
-    <label class="password"> Contraseña </label>
-    <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
-
-    <button type="button" id="boton" class="boton">Ingresa</button>
-    <button type="button" id="botonGoogle" class="boton2">Ingresa con Google</button>
-      <p>¿No tienes cuenta?</p>
-    <butoon type="button" id="boton2" class="boton2">Registrate</button>
+  <label class="email"> Correo electrónico </label>
+  <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/><br>
+  <label class="password"> Contraseña </label>
+  <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/><br>
+  <button type="button" id="boton" class="boton">Ingresa</button>
+  <button type="button" id="botonGoogle" class="botonGoogle">Ingresa con Google</button>
+  <p>¿No tienes cuenta?</p>
+  <butoon type="button" id="botonRegister" class="botonRegister">Registrate</button>
   </form>
-  
-  <div class="imagen">
-    <img src="../Imagenes/deportesvec.jpg"></div>
   </div>
-  `;
+  <div class="imagen">
+  <img class="img" src="../Imagenes/deportesvec.jpg">
+  </div>`;
 
  userData.innerHTML = data;
 
@@ -48,7 +46,7 @@ export const home = ()=>{
  });
 
   //-------Evento para boton y direccionar a REGISTRATE y nos muestra html para ingresar datos-------------
-  let btn2 = userData.querySelector('#boton2');
+  let btn2 = userData.querySelector('#botonRegister');
   btn2.addEventListener('click', () =>{
    register()
   });
