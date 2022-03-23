@@ -16,6 +16,9 @@ export const register =  () => {
       <butoon type="button" id="submit-register" class="boton2">Registrate</button>
     </form>
     </div>
+    <div class="flex-container">
+    <p class="mensajeErrorRegistro" id="mensajeErrorRegistro"</p>
+    </div>
     `;
  dataRegistrer.innerHTML = data;                                           
 
@@ -52,10 +55,32 @@ createUserWithEmailAndPassword(auth, email, password)
     const errorMessage = error.message;
     console.log(errorCode)
     console.log(errorMessage)
+
+    if(errorCode === 'auth/invalid-email'){
+      root.querySelector("#mensajeErrorRegistro").innerHTML = "Email Invalido";
+    
+      //Email invalido
+    }else if(errorCode === 'auth/invalid-email'){
+      root.querySelector("#mensajeErrorRegistro").innerHTML = "Ingresa Email";
+    
+      //Ingrese email
+    } else if(errorCode === 'auth/missing-email'){
+      root.querySelector("#mensajeErrorRegistro").innerHTML = "Ingresar Email";
+      
+
+    } else if(errorCode === 'auth/internal-error'){
+      root.querySelector("#mensajeErrorRegistro").innerHTML = "Rellene todos los campos";
+     
+    } else if(errorCode === 'auth/weak-password'){
+      root.querySelector("#mensajeErrorRegistro").innerHTML = "Minimo 6 caracteres";
+    }
+
   });
+
+
 }
   
-
+ 
 
 
 

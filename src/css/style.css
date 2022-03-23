@@ -13,6 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    
    
 }
 
@@ -82,6 +83,38 @@ h1{
     
 }    
 
+
+
+
+.mensajeErrorRegistro {
+
+   
+   color:rgba(5, 114, 238, 0.938); 
+   background-color: #e8f353;
+   font-style: italic; 
+   font-size: 1em; 
+    -webkit-text-stroke: 0.9px ; 
+    position: absolute;
+    top: 26%;
+    left: 45%;
+   
+   
+}
+
+
+
+.mensajeErrorLogin {
+
+        color:rgba(47, 135, 236, 0.938);  
+        font-size: 1em; 
+        -webkit-text-stroke: 0.9px ; 
+        position: absolute;
+        top: 30%;
+        left:47%;
+        font-style: italic;
+  }
+
+
 #submit-register{
     display: flex;
     text-align: center;
@@ -94,6 +127,8 @@ h1{
     height: 2.0625em;
     
 }
+
+
 .boton{
     display: inline-flex;
     margin: 2em;
@@ -139,10 +174,6 @@ footer{
 }
 
 
-
-
-
-
 .imagen{
     display: flex;
     align-items: center;
@@ -165,3 +196,4 @@ img{
     }
     
 }    
+

@@ -7,7 +7,6 @@ export const home = ()=>{
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
   const data = `
-
   <div class = "header">
     <div class="logo">
       <img class= "imgResponsive" src="../Imagenes/mano1.png">  </div>
@@ -20,7 +19,6 @@ export const home = ()=>{
  
     <label class="password"> Contraseña </label>
     <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
-
     <button type="button" id="boton" class="boton">Ingresa</button>
     <button type="button" id="botonGoogle" class="boton2">Ingresa con Google</button>
       <p>¿No tienes cuenta?</p>
@@ -30,6 +28,9 @@ export const home = ()=>{
   <div class="imagen">
     <img src="../Imagenes/deportesvec.jpg"></div>
   </div>
+
+  <p class="mensajeErrorLogin" id="mensajeErrorLogin" </p>
+
   `;
 
  userData.innerHTML = data;
@@ -77,7 +78,22 @@ export const home = ()=>{
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+
+      if (errorCode === "auth/user-not-found"){
+        root.querySelector("#mensajeErrorLogin").innerHTML = "usuario no regristrado";
+        
+      } else if (errorCode === "auth/wrong-password"){
+        root.querySelector("#mensajeErrorLogin").innerHTML = "Contraseña incorrecta";
+      }
+        else if (errorCode === "auth/invalid-email"){
+        root.querySelector("#mensajeErrorLogin").innerHTML= "Correo invalido";
+      }
+        else if (errorCode === "auth/internal-error"){
+        root.querySelector("#mensajeErrorLogin").innerHTML= "Ingrese contraseña";
+      }
+
     });
+    
     
 }  
 //Ingreso con google firebase
@@ -102,15 +118,12 @@ signInWithPopup(auth, provider)
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
+
+    
+
   });
 }
+
  window.location.hash = 'home';
  return userData
 }
-
-
-
-
-
-
-
