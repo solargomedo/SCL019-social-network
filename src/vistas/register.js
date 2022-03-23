@@ -1,5 +1,6 @@
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import {app} from "../lib/firebase.js" 
+import { home } from "./home.js";
 
 export const register =  () => {                      
 
@@ -8,6 +9,7 @@ export const register =  () => {
   const data = `
     <div class="register">
     <form id="formLogin" class="FormLogin">
+
     <label class="name"> Nombre </label>
     <input type="text" id="registerNameLogin" class="registerNameLogin" placeholder= "Ingresa tu nombre"/>
     <label class="email"> E-mail </label>
@@ -17,6 +19,7 @@ export const register =  () => {
     <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
     </form></div>;`
   
+
 
  dataRegistrer.innerHTML = data;                                           
 
@@ -43,8 +46,8 @@ createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     //-- registrado
     const user = userCredential.user;
-    //check(alert('Felicitaciones'))
-    console.log(user)
+    //alert("Felicidades")
+
     
   })
   //--no registrado
@@ -76,9 +79,20 @@ createUserWithEmailAndPassword(auth, email, password)
   });
 
 
-}
+
+  const open = document.getElementById('submit-register');
+  const modal_container = document.getElementById('modal_container');
+  const close = document.getElementById('close');
   
- 
+  open.addEventListener('click', () => {
+    modal_container.classList.add('show');
+  });
+  
+  close.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+    home()
+  });
 
+}
 
-
+  
