@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-import { collection, addDoc, getFirestore, getDocs} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"
+import { collection, addDoc, getFirestore, getDocs} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBIqyphHuzt--s38OayJrvHpQl11oY8Fw0",
@@ -16,17 +16,18 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
-import { collection, addDoc, getDocs } from "firebase/firestore";
+
 
 // Add a new document with a generated id.
 export const createPost = async(comentario, titulo)=>{
 const docRef = await addDoc(collection(db, "post"), {
-  name: titulo,
-  country: comentario
+  titulo ,
+  comentario
 });
 console.log("Document written with ID: ", docRef.id);
 }
 
+/*
 export const getAllPost = async() =>{
 const allpost = await getDocs(collection(db, "post"));
 allpost.forEach((doc) => {
@@ -34,4 +35,4 @@ console.log(doc, id, "=>", doc.data());
 
 });
 }
-
+*/
