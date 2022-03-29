@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-import { collection, addDoc, getFirestore, getDocs} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"
+import { collection, addDoc, getFirestore, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBIqyphHuzt--s38OayJrvHpQl11oY8Fw0",
@@ -19,13 +19,26 @@ export const db = getFirestore(app);
 
 
 // Add a new document with a generated id.
-export const createPost = async(comentario, titulo)=>{
-const docRef = await addDoc(collection(db, "post"), {
-  titulo ,
-  comentario
-});
-console.log("Document written with ID: ", docRef.id);
+export const createPost = async (comentario, titulo) => {
+  const docRef = await addDoc(collection(db, "post"), {
+    titulo,
+    comentario
+  });
+  console.log("Document written with ID: ", docRef.id);
 }
+
+
+export const getTask = async (id) => {
+  return await getDocs(collection(db, 'post'));
+}
+ 
+export const onGetTask = () => {
+
+export {
+  onSnapshot
+}
+
+
 
 /*
 export const getAllPost = async() =>{

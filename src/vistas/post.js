@@ -1,102 +1,89 @@
+<<<<<<< HEAD
 import { createPost } from "../../lib/firebase.js";
 import { collection, getDocs, orderBy,} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+=======
+//import { async } from "regenerator-runtime";
+import { createPost, db, getTask } from "../../lib/firebase.js";
+//import { collection, getDocs, orderBy,} from 'https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js';
+>>>>>>> 266f661ad518c7614dfa89883625f3ff430871f1
 
 
- export const post =  () => {  
- 
+export const post = () => {
+
   const dataPost = document.createElement('div');
   dataPost.setAttribute("class", "mainclass");
   const data = `
     
     <main>
-    <form id="task-form">
-    <label for="title"> title:</label>
+    <div id="task-form">
+    <label for="title"> Nombre:</label>
     <input type="text" placeholder="task title" id= "task-title">
     
-    <label for="description"> description:</label>
+    <label for="description"> comentario:</label>
     <textarea id="task-description" rows="3" placeholder= "task description"></textarea>
     
-    <button id="btn-task-save">save</button>
+    <button id="btn-task-save">Publicar</button>
 
     </form>
     
+    <div id="tasks-container"></div>
+
     <button class="returnBtn" type="submit">
     <a href="#home" type="button" id="btnCerrar" class="btnCerrar">Cerrar sesion</a>
-    <div id="tesks-container"></div>
-
     </main>`;
 
-    dataPost.innerHTML = data;
+  dataPost.innerHTML = data;
+
+  const btnSavePost = dataPost.querySelector('#btn-task-save');
+  btnSavePost.addEventListener('click', () => {
+
+    const post = dataPost.querySelector("#task-title").value;
+    const desc = dataPost.querySelector("#task-description").value;
+
+    console.log(post)
+    createPost(post, desc);
+
+  });
 
 
 
-    //btn addPost
-const btnAddPost = dataPost.querySelector("#btn-task-save"); 
-let btonPost = dataPost.querySelector('#btn-task-save');       
-btonPost.addEventListener('click', () => {                       
- postUsuario();                                                 
-});
-btnAddPost.addEventListener("click", async(event) => {
-    event.preventDefault();
-    //almacena el comentario
-    const publication = dataPost.querySelector("#task-description").value;
-    console.log(publication);
-    //llamar a createpost
-    await createPost(publication);
-});
+  /* Funcion para mostrar post en muro*/
 
-window.location.hash = 'post';
+  const newContainer = dataPost.querySelector('#tasks-container')
+  const newAllPost = async () => {
+    console.log("hola1")
+    const querySnapshot = await getTask()
+    console.log(querySnapshot)
 
-return dataPost
+    let html = ''
+    querySnapshot.forEach(doc => {
+      const commentPost = doc.data();
+      //const userId = getAuth().currentUser.uid;
+      html += `
 
+          <div> 
+          <h3 class="titlePost">${commentPost.titulo}</h3>
+          <textarea class="commentDone" readonly>${commentPost.comentario}</textarea>
+          </div>
+          `
+    })
+
+    //taksContainer.innerHTML = html
+    newContainer.innerHTML = html
+  }
+  newAllPost()
+
+
+
+  //window.location.hash = 'post';
+  return dataPost
 
 }
 
-/*const getAllPost = async() => {
 
-    const allpost = await getDocs(collection(db, "post"));
-    allpost.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        //console.log(doc.id, " => ", doc.data());
 
-        const containerPost = dataPost.querySelector('#tesks-container')
-        const timer = query(collection(db, "post"), orderBy("date", "desc"))
 
-        onSnapshot(timer, (querySnapshot) => {
-            let html = ''
 
-            querySnapshot.forEach(doc => {
-                const commentPost = doc.data();
-                html += `
-        
-          <div> 
-          <h3 class="titlePost">${commentPost.title}</h3>
-          <textarea class="commentDone" readonly>${commentPost.description}</textarea>
-       
-          <div class="btns"> 
-            <input class="counter" id="counter" type="number"  value="0" name="" readonly  />
-            
-            <button class="like" id="like"><i class="fa-solid fa-heart"></i></button> 
-            <button class="btnDelete" data-id="${doc.id}"><i class="fa-solid fa-trash"></i>
-                Delete</button>
-            <button class="btnEdit" data-id="${doc.id}"><i class="fa-solid fa-pen-to-square"></i>
-                Edit</button>
-          </div> 
-        </div>`
-            })
-        })
-    });
- 
-    }*/
-    
-    
- 
 
-   
- 
-    
-    
-  
-    
 
-    
+
