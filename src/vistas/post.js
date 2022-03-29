@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { createPost } from "../../lib/firebase.js";
-import { collection, getDocs, orderBy,} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
-=======
 //import { async } from "regenerator-runtime";
 import { createPost, db, getTask } from "../../lib/firebase.js";
 //import { collection, getDocs, orderBy,} from 'https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js';
->>>>>>> 266f661ad518c7614dfa89883625f3ff430871f1
 
 
 export const post = () => {
