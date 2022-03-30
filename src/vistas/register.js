@@ -20,7 +20,7 @@ export const register =  () => {
     <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
     <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
 
-    <p class="mensajeErrorRegistro" id="mensajeErrorRegistro" </p>
+    <p class="mensajeErrorRegistro" id="mensajeErrorRegistro" style="color:red;  font-size: 30px; font-weight: bold; -webkit-text-stroke: 0.5px; text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;"> </p>
     </form>
     </div> 
     <div id="modal_container" class="modal-container">
@@ -77,7 +77,7 @@ createUserWithEmailAndPassword(auth, email, password)
     
       //Email invalido
     }else if(errorCode === 'auth/invalid-email'){
-      root.querySelector("#mensajeErrorRegistro").innerHTML = "Ingresa Email";
+      root.querySelector("#mensajeErrorRegistro").innerHTML = "Email invalido";
     
       //Ingrese email
     } else if(errorCode === 'auth/missing-email'){
