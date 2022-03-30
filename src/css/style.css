@@ -57,27 +57,7 @@ h1{
     border-radius: 5px;
     margin: 15px;    
 }    
-.mensajeErrorRegistro {
-    color:rgba(5, 114, 238, 0.938); 
-    background-color: #e8f353;
-    font-style: italic; 
-    font-size: 1em; 
-    -webkit-text-stroke: 0.9px ; 
-    position: absolute;
-    top: 26%;
-    left: 45%;
-        
-}
-.mensajeErrorLogin {
 
-    color:rgba(47, 135, 236, 0.938);  
-    font-size: 1em; 
-    -webkit-text-stroke: 0.9px ; 
-    position: absolute;
-    background-color: #69D4CD;
-    border-color: #69D4CD;
-    border-radius: 5px;
-}
 .boton{
     width: 200px;
     margin: 15px;
@@ -112,13 +92,7 @@ h1{
     border-radius: 89px;
     
 }
-p{
-    color: blue;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin: 15px;
-}
+
 footer{
     background: rgb(231, 231, 82);
     color: white;

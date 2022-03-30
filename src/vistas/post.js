@@ -20,7 +20,7 @@ export const post = () => {
     
     <button id="btn-task-save">Publicar</button>
 
-    </form>
+  
     
     <div id="tasks-container"></div>
 
@@ -42,6 +42,7 @@ export const post = () => {
     const post = dataPost.querySelector("#task-title").value;
     const desc = dataPost.querySelector("#task-description").value;
     
+
     //console.log(post)
     createPost(post, desc);
 

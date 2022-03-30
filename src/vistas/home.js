@@ -24,7 +24,7 @@ export const home = ()=>{
   <butoon type="button" id="botonRegister" class="botonRegister">Registrate</button>
   </form>
   </div>
-  <p class="mensajeErrorLogin" id="mensajeErrorLogin"></p>
+  <p class="mensajeErrorLogin" id="mensajeErrorLogin" style="color:red;  font-size: 30px; font-weight: bold; -webkit-text-stroke: 0.5px ; text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;"></p>
   <h2>Conoce compañer@s de entrenamiento y multiplica la motivación.</h2>
   <div class="imagen">
   <img class="img" src="../Imagenes/deportesvec.jpg">
