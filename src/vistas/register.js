@@ -7,14 +7,16 @@ export const register =  () => {
   const dataRegistrer = document.createElement('div');
   dataRegistrer.setAttribute("class", "mainclass");
   const data = `
-    <div class="register">
+    <div class="mainclass">
+    <div class = "header">
+    <div class="logo">
+    <img class="img" src="../Imagenes/mano1.png">  
+    </div>
+    <h1>Te Apaño!</h1>
+    </div>
     <form id="formLogin" class="FormLogin">
-
-    <label class="name"> Nombre </label>
     <input type="text" id="registerNameLogin" class="registerNameLogin" placeholder= "Ingresa tu nombre"/>
-    <label class="email"> E-mail </label>
     <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
-    <label class="password"> Contraseña </label>
     <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
     <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
 

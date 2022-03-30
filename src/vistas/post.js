@@ -8,6 +8,7 @@ export const post = () => {
   const dataPost = document.createElement('div');
   dataPost.setAttribute("class", "mainclass");
   const data = `
+
     
     <main>
     <div id="task-form">
@@ -26,6 +27,7 @@ export const post = () => {
     <button class="returnBtn" type="submit">
     <a href="#home" type="button" id="btnCerrar" class="btnCerrar">Cerrar sesion</a>
     </main>`;
+
 
   dataPost.innerHTML = data;
 

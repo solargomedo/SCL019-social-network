@@ -7,28 +7,28 @@ export const home = ()=>{
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
   const data = `
+  <div class = "mainclass">
   <div class = "header">
   <div class="logo">
-    <img class="img" src="../Imagenes/mano1.png">  
+  <img class="img" src="../Imagenes/mano1.png">  
   </div>
   <h1>Te Apaño!</h1>
   </div>
   <div class="form">
   <form id="formLogin" class="FormLogin">
-  <label class="email"> Correo electrónico </label>
   <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/><br>
-  <label class="password"> Contraseña </label>
-  <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/><br>
+  <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
   <button type="button" id="boton" class="boton">Ingresa</button>
   <button type="button" id="botonGoogle" class="botonGoogle">Ingresa con Google</button>
   <p>¿No tienes cuenta?</p>
   <butoon type="button" id="botonRegister" class="botonRegister">Registrate</button>
   </form>
   </div>
-  <p class="mensajeErrorLogin" id="mensajeErrorLogin" </p>
-
+  <p class="mensajeErrorLogin" id="mensajeErrorLogin"></p>
+  <h2>Conoce compañer@s de entrenamiento y multiplica la motivación.</h2>
   <div class="imagen">
   <img class="img" src="../Imagenes/deportesvec.jpg">
+  </div>
   </div>`;
 
 
