@@ -39,13 +39,4 @@ export {
 }
 
 
-
-/*
-export const getAllPost = async() =>{
-const allpost = await getDocs(collection(db, "post"));
-allpost.forEach((doc) => {
-console.log(doc, id, "=>", doc.data());
-
-});
 }
-*/
