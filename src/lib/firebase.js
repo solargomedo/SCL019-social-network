@@ -38,10 +38,9 @@ export const onGetTask = () => {
 export const updatePost = (id, newFields) => updateDoc(doc(db, "post", id), newFields);
 
 export const guardarTask= (titulo, comentario) => {
-  const docRef = addDoc(collection(db,"publicaciones"),{
-    titulo:titulo,
-    descripcion: comentario,
-    name: auth.currentUser.displayName,
+  const docRef = addDoc(collection(db,"post"),{
+    titulo,
+    comentario,
     email: auth.currentUser.email,
     userId: auth.currentUser.uid,
     date: Date(Date.now()),

@@ -63,6 +63,19 @@ createUserWithEmailAndPassword(auth, email, password)
     const user = userCredential.user;
     //alert("Felicidades")
 
+        let open = document.getElementById('submit-register');
+        let modal_container = document.getElementById('modal_container');
+        let close = document.getElementById('close');
+        
+        open.addEventListener('click', () => {
+          modal_container.classList.add('show');
+        });
+        
+        close.addEventListener('click', () => {
+          modal_container.classList.remove('show');
+          home()
+        });
+
     
   })
   //--no registrado
@@ -95,18 +108,7 @@ createUserWithEmailAndPassword(auth, email, password)
 
 
 
-  const open = document.getElementById('submit-register');
-  const modal_container = document.getElementById('modal_container');
-  const close = document.getElementById('close');
-  
-  open.addEventListener('click', () => {
-    modal_container.classList.add('show');
-  });
-  
-  close.addEventListener('click', () => {
-    modal_container.classList.remove('show');
-    home()
-  });
+ 
 
 }
 
