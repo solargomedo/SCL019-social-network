@@ -184,6 +184,7 @@ justify-content: center;
 }
 @media screen and (min-width: 320px){
     
+<<<<<<< HEAD
     .registerNameLogin, 
     .nickNameLogin, 
     .emailLogin, 
@@ -214,3 +215,10 @@ justify-content: center;
 @media screen and (min-width: 1024px){
 
 }
+=======
+}    
+  
+ /*aqui termina el modelo de mobil*/
+
+
+>>>>>>> c3d19e6a59365b727bb7c40293b506bfcf458e62
