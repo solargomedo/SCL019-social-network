@@ -29,8 +29,10 @@ Estas historias de usuario las organizamos de forma colaborativa mediante trello
 
 Realizamos un prototipo de baja fidelidad y un prototipo de alta fidelidad para el diseño de cada historia de usuario:
 
-### PONER FOTOOOS
+![Imagen-baja-fidelidad](src/Imagenes/Baja-fidelidad.jpg) 
+### falta imagen alta fidelidad
 
 Verificamos que nuestra aplicacion, realizando test de usabilidad, nos dieron feedback en funciones, mensajes, diseño, lo cual nos ayudo a corregir nuestro codigo. Ayudandonos a mejorar.
 
-### PONER FOTOS FINALES 
+![Imagen-baja-fidelidad](src/Imagenes/prototipo-alta.jpg) 
+![Imagen-baja-fidelidad](src/Imagenes/vista-escritorio.png)
