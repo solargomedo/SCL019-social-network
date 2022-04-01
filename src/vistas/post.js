@@ -11,7 +11,7 @@ export const post = () => {
     <a href="#home" type="button" id="btnCerrar" class="btnCerrar">Cerrar sesion</a>
     <br>
     <input type="text" placeholder="NOMBRE" id= "task-title" class="nombrePost">     
-    <textarea id="task-description" rows="3" placeholder= "COMENTARIO"></textarea>
+    <textarea id="task-description" class="comentarioPost" rows="3" placeholder= "COMENTARIO"></textarea>
     <button id="btn-task-save">Publicar</button>
   </div>
 

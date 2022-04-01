@@ -1,7 +1,6 @@
-
 body{
     background-color: #69D4CD;
-    /* background-color: white;
+   /* background-color: white;
     border: 2em solid #69D4CD; */
     font-family: 'Roboto', sans-serif;
     margin: 30px;
@@ -101,6 +100,7 @@ footer{
     color: white;
     padding: 0.2em;
     text-align: center;  
+    
 }
 .imagen{
     width: 12.em;
@@ -148,20 +148,22 @@ footer{
 }
 
 
-/* Diseño de contenedor de post */
+/*Diseño de contenedor de post*/
 #tasks-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 90%;
-    height: 35em;
+    height: 40em;
     overflow-y: scroll;
     border: 10px solid white;
     border-radius: 1.87em;
     padding: 0.62em;
-    margin: 1em;
+    margin: 0,5em;
+   
+    
   }
-  /* Scroll Personalizado */
+  /*Scroll Personalizado */
   #tasks-container::-webkit-scrollbar {
     width: 1.25em;
     background: gainsboro;
@@ -177,7 +179,65 @@ footer{
 .nombrePost{
     background-color: white;
     opacity: 0.7;
+    border-radius: 1.10em;
+    padding: 0.62em;
+    margin: 1em;
     
+}
+
+.comentarioPost{
+
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 1.10em;
+    padding: 0.62em;
+    margin: 1em;
+
+}
+
+#btn-task-save{
+
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 1.60em;
+    padding: 0.62em;
+    margin: 1em;
+
+}
+
+.btnCerrar{
+
+color: rgb(5, 5, 5);
+font-size: 10px;
+font-family: 'Satisfy', cursive;
+border-radius: 1em;
+display: inline-block;
+padding: 1em;
+text-decoration: none;
+background-color: #e0eb4c;
+cursor: pointer;
+
+
+
+}
+
+.btnCerrar{
+    box-shadow: 0 0 10px #cedb5b, 0 0 40px #cedb5b, 0 0 80px #cedb5b;
+    
+        
+    }
+    
+
+
+.commentDone{
+
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 1.10em;
+    padding: 0.90em;
+    width: 80%;
+    height: 5em;
+    margin: 1em;
 }
 
 
@@ -202,18 +262,19 @@ footer{
 
 
 
+
   
 
 
 
 
 
-/* 
 
 
-@media screen and (min-width: 320px){
+
+ /*@media screen and (min-width: 320px){
     
-    /* .registerNameLogin, 
+    .registerNameLogin, 
     .nickNameLogin, 
     .emailLogin, 
     .passwordLogin{

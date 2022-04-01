@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from "../lib/firebase.js"
 import { register } from "./register.js";
+
 //import { auth } from "./register";
 
 export const home = () => {
@@ -109,5 +110,6 @@ export const home = () => {
       });
   }
   window.location.hash = 'home';
+
   return userData
 }

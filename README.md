@@ -12,6 +12,8 @@ para determinar a nuestro público objetivo realizamos un formulario de pregunta
    * los colores brillantes los motivan.
    * el rango de edad va de los 25 a 35 años
 
+![Imagen-grafico](src/Imagenes/grafico.jpg) 
+
 ### Historias de Usuario
 
 Para elegir adecuadamente las características principales que debía tener nuestra red social según nuestro público objetivo, definimos las siguientes historias de usuario:
@@ -34,5 +36,5 @@ Realizamos un prototipo de baja fidelidad y un prototipo de alta fidelidad para 
 
 Verificamos que nuestra aplicacion, realizando test de usabilidad, nos dieron feedback en funciones, mensajes, diseño, lo cual nos ayudo a corregir nuestro codigo. Ayudandonos a mejorar.
 
-![Imagen-baja-fidelidad](src/Imagenes/prototipo-alta.jpg) 
-![Imagen-baja-fidelidad](src/Imagenes/vista-escritorio.png)
+![Imagen-alta-figma](src/Imagenes/prototipo-alta.jpg) 
+![Imagen-baja-figma](src/Imagenes/vista-escritorio.png)
