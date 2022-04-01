@@ -1,17 +1,13 @@
-*{  
-    margin: 0;
-    padding: 0;
-    font-size: 16px;;
-}
+
 body{
-    background-color: white;
+    background-color: #69D4CD;
+    /* background-color: white;
+    border: 2em solid #69D4CD; */
     font-family: 'Roboto', sans-serif;
-    border: 2em solid #69D4CD;
-    font-size: 10px;
-    margin: 0;
-        
-}
-.mainclass{       
+    margin: 30px;
+   }
+.mainclass{   
+    background-color: white;    
     width: 100%;
     height: 100vh;
     display: flex;
@@ -21,29 +17,33 @@ body{
     background-position: center bottom;   
 }
 .header{
-    width: 200px; 
-    height: 50px;   
+    width: 12.5em; 
+    height: 3em;   
     background-color: #EAF28B;
-    margin: 10px 10px;
-    border-radius: 5px;  
-    margin-left: 71px;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+     
+
 }
 .logo{
     width: 20%;
     float:left;
     filter: brightness(1.1);
     mix-blend-mode:multiply;
-    padding-left: 0.8em;
-    padding-top: 0.3em;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
 }
-FormLogin{
+.FormLogin{
     width: 100%;
 
 }
 h1{
-    color: white;
-    font-size: 30px;
-    margin-left: 5px;
+    color: rgb(41, 141, 223);
+    font-size: 2em;
+    margin-top: 0.2em;
+    margin-left: 0.3em;
 }
 .registerNameLogin, 
 .nickNameLogin, 
@@ -55,44 +55,47 @@ h1{
     outline:none;
     box-sizing: border-box;
     border-radius: 5px;
-    margin: 15px;    
+    margin: 0.7em;    
 }    
 
 .boton{
-    width: 200px;
-    margin: 15px;
-    padding: 10px;
+    width: 9.37em;
+    margin: 0.93em;
+    padding: 0.62em;
     background-color: #69D4CD;
     border: none;
-    border-radius: 89px;
-    margin-top: 25px;
+    border-radius: 5.56em;
+    margin-top: 1em;
         
 }
 .botonGoogle{
-    width: 200px;
-    font-size: 1em;
-    padding: 10px;
+   
+    width: 11em;
+    margin: 0.93em;
+    padding: 0.62em;
     border: none;
-    margin: 15px;  
+    margin-top: 0.5em;
     transition: all 0.5s;
     cursor: pointer;
     background-color: #69D4CD;
-    border-radius: 89px;
+    border-radius: 5.56em;
         
 }
 .botonRegister{
-    width: 190px;
-    font-size: 1em;
-    padding: 10px;
+    width: 11.87em;
+    padding: 0.8em;
     border: 1px solid;
-    margin: 5px;  
+    margin-top: 1.56em;  
     transition: all 0.5s;
     cursor: pointer;
     background-color:#f4fdfd;
-    border-radius: 89px;
-    
+    border-radius: 5.5em;  
 }
 
+p{
+    color: blue;
+    font-weight: bold;
+}
 footer{
     background: rgb(231, 231, 82);
     color: white;
@@ -100,14 +103,10 @@ footer{
     text-align: center;  
 }
 .imagen{
-    width: 200px;
-    margin-top: 80px;
-    
-
+    width: 12.em;
 }
 .img{
     width: 100%;
-
 }
 .modal-container {
     display: flex;
@@ -129,36 +128,92 @@ footer{
 }
 .modal {
     background-color: #fff;
-    width: 600px;
+    width: 37.5em;
     max-width: 100%;
-    padding: 30px 50px;
-    border-radius: 5px;
+    padding: 1.87em 3.12em;
+    border-radius: 0.3em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-.modal h3{
-    color:#050f02;
-    margin: 0;
-}
-.modal p{
-    opacity: 0.7;
-    color:#050f02;
-    font-size: 12px;
-}
 #close{
-display: inline-flex;
-margin: 2em;
-background-color: #69D4CD;
-border-color: #69D4CD;
-border-radius: 5px;
-width: 9 em;
-height: 2 em;
-flex-direction: column-reverse;
-justify-content: center;
+    display: inline-flex;
+    margin: 2em;
+    background-color: #69D4CD;
+    border-color: #69D4CD;
+    border-radius: 0.3em;
+    width: 9 em;
+    height: 2 em;
+    flex-direction: column-reverse;
+    justify-content: center;
 }
+
+
+/* Diseño de contenedor de post */
+#tasks-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 35em;
+    overflow-y: scroll;
+    border: 10px solid white;
+    border-radius: 1.87em;
+    padding: 0.62em;
+    margin: 1em;
+  }
+  /* Scroll Personalizado */
+  #tasks-container::-webkit-scrollbar {
+    width: 1.25em;
+    background: gainsboro;
+    border-radius: 0.93em 2.5em 2.5em 0.93em;
+  }
+  
+  #tasks-container::-webkit-scrollbar-thumb {
+    background: rgb(231, 231, 82);
+    border-radius: 2.18em;
+  }
+
+
+.nombrePost{
+    background-color: white;
+    opacity: 0.7;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+/* 
+
+
 @media screen and (min-width: 320px){
     
-    .registerNameLogin, 
+    /* .registerNameLogin, 
     .nickNameLogin, 
     .emailLogin, 
     .passwordLogin{
@@ -169,7 +224,7 @@ justify-content: center;
         box-sizing: border-box;
         border-radius: 10px;
         margin: 20px;    
-    }    
+    }     
     .imagen{
         margin-left: 20px;
 
@@ -187,4 +242,4 @@ justify-content: center;
 }
 @media screen and (min-width: 1024px){
 
-}
+} */
