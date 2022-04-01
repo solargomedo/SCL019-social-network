@@ -30,6 +30,9 @@ export const post = () => {
     const desc = dataPost.querySelector("#task-description").value;
     //console.log(post)
     createPost(post, desc);
+
+    document.querySelector('#task-title').value = ""; 
+    document.querySelector('#task-description').value = ""; 
   });
 
   /* Funcion para mostrar post en muro*/
