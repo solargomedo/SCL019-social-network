@@ -13,15 +13,15 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-position: center bottom;   
+    background-position: center bottom;  
+    align-items: center; 
 }
 .header{
-    width: 12.5em; 
-    height: 3em;   
+    width: 12.9em; 
+    height: 3.5em;   
     background-color: #EAF28B;
     margin-top: 2em;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
      
 
@@ -31,23 +31,32 @@ body{
     float:left;
     filter: brightness(1.1);
     mix-blend-mode:multiply;
-    padding-left: 0.5em;
-    padding-top: 0.2em;
+    padding-left: 0.3em;
+    padding-top: 0.3em;
 }
 .FormLogin{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+
 
 }
 h1{
-    color: rgb(41, 141, 223);
+    color: #ffff;
     font-size: 2em;
-    margin-top: 0.2em;
+    margin-top: 0.3em;
     margin-left: 0.3em;
+    margin-right: 0.2em;
 }
 .registerNameLogin, 
 .nickNameLogin, 
 .emailLogin, 
 .passwordLogin{
+    width: 15em;
     padding: 5px;
     border: 1px solid;
     border-color: #050f02;
@@ -65,6 +74,7 @@ h1{
     border: none;
     border-radius: 5.56em;
     margin-top: 1em;
+
         
 }
 .botonGoogle{
@@ -242,58 +252,34 @@ cursor: pointer;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
- /*@media screen and (min-width: 320px){
-    
-    .registerNameLogin, 
-    .nickNameLogin, 
-    .emailLogin, 
-    .passwordLogin{
-        padding: 10px;
-        border: 1px solid;
-        border-color: #050f02;
-        outline:none;
-        box-sizing: border-box;
-        border-radius: 10px;
-        margin: 20px;    
-    }     
-    .imagen{
-        margin-left: 20px;
-
+@media screen and (min-width: 450px){
+    body{
+        background-color: white;
+        margin: 30px;
     }
-    .botonRegister{
-        margin-top: 20px;
+    .contenedor{
+        width: 30%;
+        background-color: #69D4CD;
+        border-radius: 3em;
+        padding: 2em;
+        display: inline-block;
+         
+        
+
+    
+    }
+    .ultimo{
+        width: 61%;
+        display: inline-block;
+       
+        
+    }
+    .mainclass{
+        display: inline-block;
+      
     }
 }
+/*
 @media screen and (min-width: 768px){
     h2{
         font-family: 'Roboto', sans-serif;

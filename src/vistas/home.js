@@ -8,19 +8,20 @@ export const home = () => {
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
   const data = `
-  <div class = "header">
-    <div class="logo">
-    <img class="img" src="../Imagenes/mano1.png"></div>
-    <h1>Te Apaño!</h1>
-  </div>
-
-  <div id="formLogin" class="FormLogin">
-    <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/><br>
-    <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
-    <button type="button" id="boton" class="boton">Ingresa</button>
-    <button type="button" id="botonGoogle" class="botonGoogle">Ingresa con Google</button>
-    <p>¿No tienes cuenta?</p>
-    <butoon type="button" id="botonRegister" class="botonRegister">Registrate</button>
+  <div class="contenedor">
+    <div class = "header">
+      <div class="logo">
+      <img class="img" src="../Imagenes/mano1.png"></div>
+      <h1>Te Apaño!</h1>
+    </div>
+    <div id="formLogin" class="FormLogin">
+      <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/><br>
+      <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
+      <button type="button" id="boton" class="boton">Ingresa</button>
+      <button type="button" id="botonGoogle" class="botonGoogle">Ingresa con Google</button>
+      <p>¿No tienes cuenta?</p>
+      <butoon type="button" id="botonRegister" class="botonRegister">Registrate</button>
+    </div>
   </div>
   <p class="mensajeErrorLogin" id="mensajeErrorLogin" ></p>
   <div class = "ultimo">
