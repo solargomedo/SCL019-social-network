@@ -1,9 +1,8 @@
 body{
     background-color: #69D4CD;
-   /* background-color: white;
-    border: 2em solid #69D4CD; */
     font-family: 'Roboto', sans-serif;
     margin: 30px;
+    font-size: 12px;
    }
 .mainclass{   
     background-color: white;    
@@ -11,20 +10,32 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-position: center bottom;  
-    align-items: center; 
+    
+    align-items: center;
+    display: grid;
+	grid-gap: 1px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                        "contenedor contenedor contenedor"
+						 "ultimo ultimo ultimo "
+						 "footer footer footer";
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: contenedor;
 }
 .header{
+    align-items: center;
     width: 12.9em; 
     height: 3.5em;   
     background-color: #EAF28B;
-    margin-top: 2em;
-    display: flex;
-    justify-content: flex-end;
-     
-
+    margin-bottom: 3em;
+    border-radius: 5px;
+    grid-area: header;
 }
 .logo{
     width: 20%;
@@ -34,17 +45,6 @@ body{
     padding-left: 0.3em;
     padding-top: 0.3em;
 }
-.FormLogin{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-
-
-
-
-}
 h1{
     color: #ffff;
     font-size: 2em;
@@ -52,33 +52,32 @@ h1{
     margin-left: 0.3em;
     margin-right: 0.2em;
 }
+.FormLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .registerNameLogin, 
 .nickNameLogin, 
 .emailLogin, 
 .passwordLogin{
     width: 15em;
-    padding: 5px;
-    border: 1px solid;
-    border-color: #050f02;
-    outline:none;
-    box-sizing: border-box;
-    border-radius: 5px;
-    margin: 0.7em;    
+    padding: 7px;
+    border: 1px solid #050f02;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    text-align: center;
 }    
-
 .boton{
     width: 9.37em;
     margin: 0.93em;
     padding: 0.62em;
     background-color: #69D4CD;
     border: none;
-    border-radius: 5.56em;
+    border-radius: 0.5em;
     margin-top: 1em;
-
-        
 }
 .botonGoogle{
-   
     width: 11em;
     margin: 0.93em;
     padding: 0.62em;
@@ -87,30 +86,30 @@ h1{
     transition: all 0.5s;
     cursor: pointer;
     background-color: #69D4CD;
-    border-radius: 5.56em;
-        
+    border-radius: 5.56em;  
+}
+p{
+    color: blue;
+    font-weight: bold;
+    margin: 0;
 }
 .botonRegister{
     width: 11.87em;
     padding: 0.8em;
     border: 1px solid;
-    margin-top: 1.56em;  
+    margin-top: 0.7em;  
     transition: all 0.5s;
     cursor: pointer;
     background-color:#f4fdfd;
-    border-radius: 5.5em;  
+    border-radius: 0.5em;  
+    text-align: center;
 }
-
-p{
-    color: blue;
-    font-weight: bold;
+.ultimo{
+    grid-area: ultimo;
 }
-footer{
-    background: rgb(231, 231, 82);
-    color: white;
-    padding: 0.2em;
-    text-align: center;  
-    
+.ultimo h4{
+    text-align: center;    
+   visibility:hidden;
 }
 .imagen{
     width: 12.em;
@@ -118,6 +117,19 @@ footer{
 .img{
     width: 100%;
 }
+footer{
+    background: #337c77;
+    /*opacity: 0.8;*/
+    font-size: 0.8em; 
+    color: white;
+    padding: 0.2em;
+    text-align: center; 
+    border-radius: 5px;
+    grid-area: footer;
+    
+    
+}
+
 .modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
@@ -251,26 +263,74 @@ cursor: pointer;
 }
 
 
+@media screen and (min-width: 425px){
+    body{            
+        font-size: 14px;
+    }
 
-@media screen and (min-width: 450px){
-    body{
-        background-color: white;
-        margin: 30px;
+	/* .mainclass{   
+        grid-template-areas: "ultimo ultimo contenedor "
+						    "footer footer footer";
+
     }
     .contenedor{
-        width: 30%;
         background-color: #69D4CD;
         border-radius: 3em;
         padding: 2em;
+    }
+
+    .ultimo{
         display: inline-block;
-         
-        
+        align-content: center;
+        height: 70vh;
+	         
+    }   */
 
     
+  
+@media screen and (min-width: 768px){
+    body{
+        background-color: white;
+        margin: 30px;
+        font-size: 16px;
+    }
+	.mainclass{   
+        grid-template-areas: "ultimo ultimo contenedor "
+						    "footer footer footer";
+    }
+    .contenedor{
+        background-color: #69D4CD;
+        border-radius: 1.5em;
+        padding: 2em;
+    }
+    .emailLogin, 
+    .passwordLogin{
+        border:none;
+    }
+    .boton,
+    .botonGoogle{
+        background-color: white;
+        opacity: 0.7;      
     }
     .ultimo{
-        width: 61%;
         display: inline-block;
+        align-content: center;
+        height: 80vh;
+    }  
+    /* .ultimo .imagen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    } */
+    .ultimo h4{
+        text-align: center;
+        font-size: 1.5em;
+        visibility:visible;
+    }
+/*    
+    }
+    
        
         
     }
@@ -290,3 +350,4 @@ cursor: pointer;
 @media screen and (min-width: 1024px){
 
 } */
+}}

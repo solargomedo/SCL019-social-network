@@ -9,26 +9,28 @@ export const home = () => {
   userData.setAttribute("class", "mainclass");
   const data = `
   <div class="contenedor">
-    <div class = "header">
+    <header class = "header">
       <div class="logo">
       <img class="img" src="../Imagenes/mano1.png"></div>
       <h1>Te Apaño!</h1>
-    </div>
-    <div id="formLogin" class="FormLogin">
-      <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/><br>
-      <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu clave"/>
-      <button type="button" id="boton" class="boton">Ingresa</button>
+    </header>
+    <main id="formLogin" class="FormLogin">
+      <input type="email" id="emailLogin" class="emailLogin" placeholder= "Correo electronico"/><br>
+      <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "contraseña"/>
+      <button type="button" id="boton" class="boton">Ingresar</button>
       <button type="button" id="botonGoogle" class="botonGoogle">Ingresa con Google</button>
       <p>¿No tienes cuenta?</p>
       <butoon type="button" id="botonRegister" class="botonRegister">Registrate</button>
-    </div>
+    </main>
   </div>
   <p class="mensajeErrorLogin" id="mensajeErrorLogin" ></p>
   <div class = "ultimo">
     <h4>Conoce compañer@s de entrenamiento y multiplica la motivación.</h4>
     <div class="imagen">
     <img class="img" src="../Imagenes/deportesvec.jpg"></div>
-  </div>`;
+  </div>
+  <footer> @Todos los derechos reservados<br>Solange Argomedo - Mónica Cofré - Gabriela Romero</footer>  `
+  ;
   userData.innerHTML = data;
 
   //--------Evento boton para loguearse--------

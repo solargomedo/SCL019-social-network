@@ -7,20 +7,22 @@ export const register = () => {
   const dataRegistrer = document.createElement('div');
   dataRegistrer.setAttribute("class", "mainclass");
   const data = `
-  <div class = "header">
-    <div class="logo">
-    <img class="img" src="../Imagenes/mano1.png"></div>
-    <h1>Te Apaño!</h1>
+  <div class="contenedor">
+    <header class = "header">
+      <div class="logo">
+      <img class="img" src="../Imagenes/mano1.png"></div>
+      <h1>Te Apaño!</h1>
+    </header>
+
+    <main id="formLogin" class="FormLogin">
+      <input type="text" id="registerNameLogin" class="registerNameLogin" placeholder= "Ingresa tu nombre"/>
+      <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
+      <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
+      <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
+    </main> 
   </div>
 
-  <div id="formLogin" class="FormLogin">
-    <input type="text" id="registerNameLogin" class="registerNameLogin" placeholder= "Ingresa tu nombre"/>
-    <input type="email" id="emailLogin" class="emailLogin" placeholder= "Ingresa tu e-mail"/>
-    <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
-    <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
-  </div> 
-
-  <p class="mensajeErrorRegistro" id="mensajeErrorRegistro"></p>
+   <p class="mensajeErrorRegistro" id="mensajeErrorRegistro"></p>
   
   <div id="modal_container" class="modal-container">
     <div class="modal">
@@ -28,7 +30,8 @@ export const register = () => {
     <p1> Ahora debes ingresar y hacer inicio de sesión </p1>
     <br>
     <button id="close">Ir a home</button>
-  </div>`;
+  </div>
+  `;
   dataRegistrer.innerHTML = data;
 
   //--------Evento boton registrarse
