@@ -6,13 +6,21 @@ import { collection, onSnapshot } from 'https://www.gstatic.com/firebasejs/9.6.8
 export const post = () => {
   const dataPost = document.createElement('div');
   dataPost.setAttribute("class", "mainclasPost");
-  const data = `    
+  const data = ` 
+  
   <div id="task-form">
+    <header class = "header">
+      <div class="logo">
+      <img class="img" src="../Imagenes/mano1.png"></div>
+      <h1>Te Apaño!</h1>
+    </header>
+    <main>
     <a href="#home" type="button" id="btnCerrar" class="btnCerrar">Cerrar sesion</a>
     <br>
-    <input type="text" placeholder="NOMBRE" id= "task-title" class="nombrePost">     
-    <textarea id="task-description" class="comentarioPost" rows="3" placeholder= "COMENTARIO"></textarea>
-    <button id="btn-task-save">Publicar</button>
+      <input type="text" placeholder="NOMBRE" id= "task-title" class="nombrePost">     
+      <textarea id="task-description" class="comentarioPost" rows="3" placeholder= "COMENTARIO"></textarea>
+      <button id="btn-task-save">Publicar</button>
+    </main>
   </div>
 
   <div id="tasks-container"></div>
@@ -45,7 +53,7 @@ export const post = () => {
         const commentPost = doc.data();
         //const userId = getAuth().currentUser.uid;
         html += `
-            <div> 
+            <div class= "postPublicado"> 
               <h3 class="titlePost">${commentPost.titulo}</h3>
               <textarea class="commentDone" readonly>${commentPost.comentario}</textarea>
               <h3 class="nombreUsuario">${commentPost.email}</h3> 

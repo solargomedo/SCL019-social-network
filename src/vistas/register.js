@@ -5,9 +5,9 @@ import { home } from "./home.js";
 export const register = () => {
 
   const dataRegistrer = document.createElement('div');
-  dataRegistrer.setAttribute("class", "mainclass");
+  dataRegistrer.setAttribute("class", "mainclassRegister");
   const data = `
-  <div class="contenedor">
+  <div class="contenedorRegister">
     <header class = "header">
       <div class="logo">
       <img class="img" src="../Imagenes/mano1.png"></div>
@@ -20,7 +20,13 @@ export const register = () => {
       <input type="password" id="passwordLogin" class="passwordLogin" placeholder= "Ingresa tu contraseña"/>
       <butoon type="button" id="submit-register" class="botonRegister">Registrate</button>
     </main> 
-  </div>
+    <div class = "imagenRegister">
+    <div class="imagen">
+    <img class="img" src="../Imagenes/register.jpg"></div>
+   </div>
+   </div>
+
+ 
 
    <p class="mensajeErrorRegistro" id="mensajeErrorRegistro"></p>
   
@@ -31,6 +37,7 @@ export const register = () => {
     <br>
     <button id="close">Ir a home</button>
   </div>
+
   `;
   dataRegistrer.innerHTML = data;
 

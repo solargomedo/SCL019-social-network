@@ -8,9 +8,7 @@ body{
     background-color: white;    
     width: 100%;
     height: 100vh;
-    display: flex;
     flex-direction: column;
-    
     align-items: center;
     display: grid;
 	grid-gap: 1px;
@@ -57,8 +55,7 @@ h1{
     flex-direction: column;
     align-items: center;
 }
-.registerNameLogin, 
-.nickNameLogin, 
+.registerNameLogin,  
 .emailLogin, 
 .passwordLogin{
     width: 15em;
@@ -109,7 +106,7 @@ p{
 }
 .ultimo h4{
     text-align: center;    
-   visibility:hidden;
+    visibility:hidden;
 }
 .imagen{
     width: 12.em;
@@ -128,6 +125,34 @@ footer{
     grid-area: footer;
     
     
+}
+/*----hoja register------*/
+.mainclassRegister{   
+    background-color: white;    
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+    
+.contenedorRegister{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.contenedorRegister input, .botonRegister{
+
+margin-top: 2em;
+
+}
+
+.imagenRegister{
+
+    width: 12.em;
+    margin-top: 6em;
 }
 
 .modal-container {
@@ -169,12 +194,66 @@ footer{
     justify-content: center;
 }
 
+/*------------hoja de post-----------------*/
 
-/*Diseño de contenedor de post*/
-#tasks-container {
+.mainclasPost{
+    display: grid;
+	grid-gap: 1px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
+    grid-template-areas: "task-form task-form"
+                        "tasks-container tasks-container";						 						 
+}
+
+#task-form{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    grid-area: task-form;
+}
+
+
+.btnCerrar{
+    color: rgb(5, 5, 5);
+    font-family: 'Satisfy', cursive;
+    font-size: 0.8em;
+    border-radius: 1em;
+    align-items:flex-start;
+    margin-right: -30em;
+    padding: 0.6em;
+    text-decoration: none;
+    background-color: #e0eb4c;
+    cursor: pointer;
+    box-shadow: 0 0 10px #cedb5b, 0 0 40px #cedb5b, 0 0 80px #cedb5b;
+}
+
+    
+.nombrePost, .comentarioPost{
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 0.5em;
+    padding: 0.62em;
+    margin: 0.5em;
+    width: 15em;   
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#btn-task-save{
+
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 0.5em;
+    padding: 0.62em;
+    margin: 1em;
+    
+
+}
+
+/*-----------Diseño de contenedor de post-------------*/
+
+#tasks-container {
     width: 90%;
     height: 40em;
     overflow-y: scroll;
@@ -182,10 +261,14 @@ footer{
     border-radius: 1.87em;
     padding: 0.62em;
     margin: 0,5em;
-   
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    grid-area: tasks-container; 
+
   }
-  /*Scroll Personalizado */
+
+  /*------------Scroll Personalizado-------------- */
   #tasks-container::-webkit-scrollbar {
     width: 1.25em;
     background: gainsboro;
@@ -197,64 +280,42 @@ footer{
     border-radius: 2.18em;
   }
 
+  .postPublicado{
 
-.nombrePost{
+    margin: 1em;
     background-color: white;
     opacity: 0.7;
     border-radius: 1.10em;
-    padding: 0.62em;
-    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+  
+}
+
+.postPublicado textarea{
+
+    border: none;
+    background-color: rgb(245, 245, 8);
+}
+
+ .fecha{
+    font-weight: lighter;
+}
+
+.nombreUsuario,.titlePost{
+
+    font-weight: bold;
+    text-align: center;
     
 }
 
-.comentarioPost{
-
-    background-color: white;
-    opacity: 0.7;
-    border-radius: 1.10em;
-    padding: 0.62em;
-    margin: 1em;
-
-}
-
-#btn-task-save{
-
-    background-color: white;
-    opacity: 0.7;
-    border-radius: 1.60em;
-    padding: 0.62em;
-    margin: 1em;
-
-}
-
-.btnCerrar{
-
-color: rgb(5, 5, 5);
-font-size: 10px;
-font-family: 'Satisfy', cursive;
-border-radius: 1em;
-display: inline-block;
-padding: 1em;
-text-decoration: none;
-background-color: #e0eb4c;
-cursor: pointer;
-
-
-
-}
-
-.btnCerrar{
-    box-shadow: 0 0 10px #cedb5b, 0 0 40px #cedb5b, 0 0 80px #cedb5b;
-    
-        
-    }
-    
 
 
 .commentDone{
 
     background-color: white;
-    opacity: 0.7;
+    opacity: 0.9;
     border-radius: 1.10em;
     padding: 0.90em;
     width: 80%;
@@ -317,17 +378,54 @@ cursor: pointer;
         align-content: center;
         height: 80vh;
     }  
-    /* .ultimo .imagen{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    } */
+    
     .ultimo h4{
         text-align: center;
         font-size: 1.5em;
         visibility:visible;
     }
+
+
+    .mainclassRegister{   
+        background-color: #fff
+        
+       
+        
+    }
+        
+    .contenedorRegister{
+        background-color: #69D4CD;
+        border-radius: 1em;
+        padding: 3em;
+    }
+    
+    .registerNameLogin{
+     
+   border: none;
+}   
+.mainclasPost{
+        padding: 2em;
+        grid-template-areas: "task-form tasks-container"
+                             "task-form tasks-container";
+
+}
+
+#task-form{
+    background-color: #fff;
+    border: 20px solid #69D4CD;
+    width: 50%;
+    height: 60%;
+    margin-top: 8em;
+    border-radius: 1em;
+    
+    
+}
+
+#tasks-container{
+
+    background-color: #69D4CD;
+    border-radius: 2em;
+}
 /*    
     }
     
