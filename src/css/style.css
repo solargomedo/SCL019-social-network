@@ -289,8 +289,7 @@ margin-top: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
-  
+    width: 16em;  
 }
 
 .postPublicado textarea{
@@ -299,19 +298,22 @@ margin-top: 2em;
     background-color: rgb(245, 245, 8);
 }
 
- .fecha{
+.fecha{
     font-weight: lighter;
+    font-size: 0.8em;
 }
 
-.nombreUsuario,.titlePost{
-
+.nombreUsuario{
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+}
+.titlePost{
     font-weight: bold;
     text-align: center;
     
+    
 }
-
-
-
 .commentDone{
 
     background-color: white;
@@ -322,7 +324,25 @@ margin-top: 2em;
     height: 5em;
     margin: 1em;
 }
+.icono{
+    width: 14em;
+    height: 1.5em;
+    display: flex;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    
 
+
+}
+.imgIcono{
+    width: 8%;
+    margin-left: 1em;
+}
+.iconoImg{
+    width: 9%;
+    margin-right: 8em;
+    
+}
 
 @media screen and (min-width: 425px){
     body{            
@@ -399,53 +419,44 @@ margin-top: 2em;
         padding: 3em;
     }
     
-    .registerNameLogin{
-     
-   border: none;
-}   
-.mainclasPost{
+    .registerNameLogin{    
+        border: none;
+    }   
+    .mainclasPost{
         padding: 2em;
+        background-color: #69D4CD;
+        border-radius: 1em;
         grid-template-areas: "task-form tasks-container"
                              "task-form tasks-container";
+    }
 
-}
+    #task-form{
+        background-color: #fff;
+        padding: 1.5em;
+        width: 50%;
+        height: 60%;
+        border-radius: 1em;
+        margin-left: auto;
+        margin-right: auto;   
+    }
 
-#task-form{
-    background-color: #fff;
-    border: 20px solid #69D4CD;
-    width: 50%;
-    height: 60%;
-    margin-top: 8em;
-    border-radius: 1em;
-    
-    
-}
+    #tasks-container{
 
-#tasks-container{
-
-    background-color: #69D4CD;
-    border-radius: 2em;
-}
-/*    
+        background-color: #69D4CD;
+        border-radius: 1em;
+        width: 80%;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
-       
         
-    }
-    .mainclass{
-        display: inline-block;
-      
+        
+}
+
+
+        
+
+
     }
 }
-/*
-@media screen and (min-width: 768px){
-    h2{
-        font-family: 'Roboto', sans-serif;
-        font-size: large;
-    }
-
-}
-@media screen and (min-width: 1024px){
-
-} */
-}}

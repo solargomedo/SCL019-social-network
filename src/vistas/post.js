@@ -58,6 +58,11 @@ export const post = () => {
               <textarea class="commentDone" readonly>${commentPost.comentario}</textarea>
               <h3 class="nombreUsuario">${commentPost.email}</h3> 
               <h4 class="fecha">${commentPost.date}</h4>
+              <div class="icono">
+              <img class="iconoImg" src="../Imagenes/mano1.png">
+              <img class="imgIcono" src="../Imagenes/Editars.png">
+              <img class="imgIcono" src="../Imagenes/Papelera.png">
+              </div>
             </div>
             `;
         //userId()   
