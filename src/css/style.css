@@ -330,9 +330,6 @@ margin-top: 2em;
     display: flex;
     margin-bottom: 0.5em;
     padding: 0.5em;
-    
-
-
 }
 .imgIcono{
     width: 8%;
@@ -343,7 +340,6 @@ margin-top: 2em;
     margin-right: 8em;
     
 }
-
 @media screen and (min-width: 425px){
     body{            
         font-size: 14px;
@@ -459,4 +455,3 @@ margin-top: 2em;
 
 
     }
-}
