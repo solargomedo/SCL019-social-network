@@ -1,80 +1,70 @@
-body {
+body{
     background-color: #69D4CD;
     font-family: 'Roboto', sans-serif;
     margin: 30px;
     font-size: 12px;
 }
-
-.mainclass {
-    background-color: white;
+.mainclass{   
+    background-color: white;    
     width: 100%;
     height: 100vh;
     flex-direction: column;
     align-items: center;
     display: grid;
-
     grid-gap: 1px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
     grid-template-areas: "header header header"
-        "contenedor contenedor contenedor"
-        "ultimo ultimo ultimo "
-        "footer footer footer";
+                        "contenedor contenedor contenedor"
+						 "ultimo ultimo ultimo "
+						 "footer footer footer";
 }
-
-.contenedor {
+.contenedor{
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: contenedor;
 }
-
-.header {
+.header{
     align-items: center;
-    width: 12.9em;
-    height: 3.5em;
+    width: 12.9em; 
+    height: 3.5em;   
     background-color: #EAF28B;
     margin-bottom: 3em;
     border-radius: 5px;
     grid-area: header;
 }
-
-.logo {
+.logo{
     width: 20%;
-    float: left;
+    float:left;
     filter: brightness(1.1);
-    mix-blend-mode: multiply;
+    mix-blend-mode:multiply;
     padding-left: 0.3em;
     padding-top: 0.3em;
 }
-
-h1 {
+h1{
     color: #ffff;
     font-size: 2em;
-    margin-top: 0.3em;
-    margin-left: 0.3em;
-    margin-right: 0.2em;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+    margin-right: 0.2rem;
 }
-
-.FormLogin {
+.FormLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.registerNameLogin,
-.emailLogin,
-.passwordLogin {
+.registerNameLogin,  
+.emailLogin, 
+.passwordLogin{
     width: 15em;
     padding: 7px;
     border: 1px solid #050f02;
     border-radius: 0.5em;
     margin-top: 0.5em;
     text-align: center;
-}
-
-.boton {
+}    
+.boton{
     width: 9.37em;
     margin: 0.93em;
     padding: 0.62em;
@@ -83,8 +73,7 @@ h1 {
     border-radius: 0.5em;
     margin-top: 1em;
 }
-
-.botonGoogle {
+.botonGoogle{
     width: 11em;
     margin: 0.93em;
     padding: 0.62em;
@@ -93,107 +82,77 @@ h1 {
     transition: all 0.5s;
     cursor: pointer;
     background-color: #69D4CD;
-    border-radius: 5.56em;
+    border-radius: 5.56em;  
 }
-
-
-.botonRegister {
+p{
+    color: blue;
+    font-weight: bold;
+    margin: 0;
+}
+.botonRegister{
+    width: 11.87em;
     padding: 0.8em;
     border: 1px solid;
-    margin-top: 0.7em;
+    margin-top: 0.7em;  
     transition: all 0.5s;
     cursor: pointer;
-    background-color: #f4fdfd;
-    border-radius: 0.5em;
+    background-color:#f4fdfd;
+    border-radius: 0.5em;  
     text-align: center;
 }
-
-.ultimo {
+.ultimo{
     grid-area: ultimo;
 }
-
-.ultimo h4 {
-    text-align: center;
-    visibility: hidden;
+.ultimo h4{
+    text-align: center;    
+    visibility:hidden;
 }
-
-
-.imagen {
-
-
 .imagen{
-
-    width: 12.em;
+    width: 21.7em;
 }
-
-.img {
+.img{
     width: 100%;
 }
-
-footer {
+footer{
     background: #337c77;
-    /*opacity: 0.8;*/
-    font-size: 0.8em;
+    font-size: 0.8em; 
     color: white;
     padding: 0.2em;
-    text-align: center;
+    text-align: center; 
     border-radius: 5px;
-    grid-area: footer;
-
-
+    grid-area: footer;    
 }
-
-
-.mensajeErrorLogin {
+.mensajeErrorLogin{
     font-size: 0.85em;
-    color: red;
+    color:red;
     position: absolute;
     right: 5.7em;
     top: 8.5em;
 }
 
 /*--------hoja register------*/
-
-.mainclassRegister {
-    background-color: white;
-
-/*----hoja register------*/
 .mainclassRegister{   
     background-color: white;    
-
     width: 100%;
     height: 100vh;
     flex-direction: column;
     align-items: center;
     display: flex;
-
+    
 }
-
-.contenedorRegister {
+.contenedorRegister{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5em;
 }
-
-.contenedorRegister input,
-.botonRegister {
-
+.contenedorRegister input, .botonRegister{
     margin-top: 2em;
-
 }
-
-.imagenRegister {
-
+.imagenRegister{
     width: 12.em;
     margin-top: 6em;
 }
-
-.mensajeErrorRegistro {
-    margin-top: -12em;
-
-}
-
 .modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
@@ -201,19 +160,17 @@ footer {
     justify-content: center;
     position: fixed;
     pointer-events: none;
-    opacity: 0;
+    opacity: 0;  
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     transition: opacity 0.3s ease;
-}
-
-.show {
+} 
+.show{
     pointer-events: auto;
     opacity: 1;
 }
-
 .modal {
     background-color: #fff;
     width: 37.5em;
@@ -223,8 +180,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-
-#close {
+#close{
     display: inline-flex;
     margin: 2em;
     background-color: #69D4CD;
@@ -235,77 +191,65 @@ footer {
     flex-direction: column-reverse;
     justify-content: center;
 }
-
-
-.mensajeErrorRegistro {
+.mensajeErrorRegistro{
     font-size: 0.85em;
-    color: red;
+    color:red;
     position: absolute;
     right: 5.7em;
     top: 8.5em;
 }
 
-
 /*------------hoja de post-----------------*/
-
-.mainclasPost {
+.mainclasPost{
     display: grid;
-    grid-gap: 1px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
+	grid-gap: 1px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
     grid-template-areas: "task-form task-form"
-        "tasks-container tasks-container";
+                        "tasks-container tasks-container";						 						 
 }
-
-#task-form {
+#task-form{
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: task-form;
 }
-
-
-.btnCerrar {
+.btnCerrar{
     color: rgb(5, 5, 5);
     font-family: 'Satisfy', cursive;
     font-size: 0.8em;
-    border-radius: 1em;
-    align-items: flex-start;
-    margin-right: -30em;
-    padding: 0.6em;
+    border-radius: 1rem;
+    display: flex;
+    width: 6.5em;
+    text-align: center;
+    float: right;
+    margin-bottom: 2rem;
+    padding: 0.6rem;
     text-decoration: none;
     background-color: #e0eb4c;
     cursor: pointer;
     box-shadow: 0 0 10px #cedb5b, 0 0 40px #cedb5b, 0 0 80px #cedb5b;
-}
-
-
-.nombrePost,
-.comentarioPost {
+}    
+.nombrePost, .comentarioPost{
     background-color: white;
     opacity: 0.7;
     border-radius: 0.5em;
     padding: 0.62em;
     margin: 0.5em;
-    width: 15em;
+    width: 13em;   
     align-items: center;
     flex-direction: column;
     display: flex;
 }
-
-#btn-task-save {
-
+#btn-task-save{
     background-color: white;
     opacity: 0.7;
     border-radius: 0.5em;
     padding: 0.62em;
     margin: 1em;
-
-
 }
 
 /*-----------Diseño de contenedor de post-------------*/
-
 #tasks-container {
     width: 90%;
     height: 40em;
@@ -313,28 +257,24 @@ footer {
     border: 10px solid white;
     border-radius: 1.87em;
     padding: 0.62em;
-    margin: 0, 5em;
+    margin: 0,5em;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    grid-area: tasks-container;
-
+    align-items: center; 
+    grid-area: tasks-container; 
 }
 
-/*------------Scroll Personalizado-------------- */
+  /*------------Scroll Personalizado-------------- */
 #tasks-container::-webkit-scrollbar {
     width: 1.25em;
     background: gainsboro;
     border-radius: 0.93em 2.5em 2.5em 0.93em;
 }
-
 #tasks-container::-webkit-scrollbar-thumb {
     background: rgb(231, 231, 82);
     border-radius: 2.18em;
 }
-
-.postPublicado {
-
+.postPublicado{
     margin: 1em;
     background-color: white;
     opacity: 0.7;
@@ -342,35 +282,26 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16em;
+    width: 16em;  
 }
-
-.postPublicado textarea {
-
+.postPublicado textarea{
     border: none;
     background-color: rgb(245, 245, 8);
 }
-
-.fecha {
+.fecha{
     font-weight: lighter;
     font-size: 0.8em;
 }
-
-.nombreUsuario {
+.nombreUsuario{
     font-weight: bold;
     text-align: center;
     font-size: 0.9em;
 }
-
-.titlePost {
+.titlePost{
     font-weight: bold;
-    text-align: center;
-
-
+    text-align: center;       
 }
-
-.commentDone {
-
+.commentDone{
     background-color: white;
     opacity: 0.9;
     border-radius: 1.10em;
@@ -379,151 +310,119 @@ footer {
     height: 5em;
     margin: 1em;
 }
-
-.icono {
+.icono{
     width: 14em;
     height: 1.5em;
     display: flex;
     margin-bottom: 0.5em;
     padding: 0.5em;
-
-
-
 }
-
-.imgIcono {
+.imgIcono{
     width: 8%;
     margin-left: 1em;
 }
-
-.iconoImg {
+.iconoImg{
     width: 9%;
-    margin-right: 8em;
-
+    margin-right: 8em;    
 }
 
-@media screen and (min-width: 425px) {
-    body {
+
+ 
+@media screen and (min-width: 425px){
+    body{            
         font-size: 14px;
     }
+}  
 
-
-
-}
-
-@media screen and (min-width: 768px) {
-    body {
+/*------------Medidas visualizacion escritorio -------------- */
+@media screen and (min-width: 768px){
+    body{
         background-color: white;
         margin: 30px;
         font-size: 16px;
     }
-
-    .mainclass {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-
 	.mainclass{   
-
+        grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(2, auto);
         grid-template-areas: "ultimo ultimo contenedor "
-            "footer footer footer";
+						    "footer footer footer";
     }
-
-    .contenedor {
+    .contenedor{
         background-color: #69D4CD;
         border-radius: 1.5em;
         padding: 2em;
     }
-
-    .emailLogin,
-    .passwordLogin {
-        border: none;
+    .emailLogin, 
+    .passwordLogin{
+        border:none;
     }
-
     .boton,
-    .botonGoogle {
+    .botonGoogle{
         background-color: white;
-        opacity: 0.7;
+        opacity: 0.7;      
     }
-
-    .ultimo {
+    .ultimo{
         display: inline-block;
         align-content: center;
         height: 80vh;
-    }
-
-    .ultimo h4 {
+    }      
+    .ultimo h4{
         text-align: center;
         font-size: 1.5em;
-        visibility: visible;
+        visibility:visible;
     }
-
-
-    .mensajeErrorLogin {
+    .mensajeErrorLogin{
         right: 5em;
         top: 10em;
     }
-
-
-
-    .mainclassRegister {
-        background-color: #fff
-    }
-
-    .contenedorRegister {
+    .mainclassRegister{   
+        background-color: #fff;    
+    }        
+    .contenedorRegister{
         background-color: #69D4CD;
         border-radius: 1em;
         padding: 3em;
-    }
-
-    .registerNameLogin {
+    }    
+    .registerNameLogin{    
         border: none;
-
-    }
-
-    .mensajeErrorRegistro {
+    }   
+    .mensajeErrorRegistro{
         right: 31.5em;
         top: 10em;
     }
-
-    .mainclasPost {
-
-    }   
     .mainclasPost{
-
         padding: 2em;
         background-color: #69D4CD;
         border-radius: 1em;
         grid-template-areas: "task-form tasks-container"
-            "task-form tasks-container";
+                             "task-form tasks-container";
     }
-
-    #task-form {
+    #task-form{
         background-color: #fff;
         padding: 1.5em;
         width: 50%;
         height: 60%;
         border-radius: 1em;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto; 
+        position: relative;  
     }
-
-    #tasks-container {
-
-        background-color: #fff;
+    #tasks-container{
+        background-color: #69D4CD;
         border-radius: 1em;
         width: 80%;
         height: 70%;
         margin-left: auto;
         margin-right: auto;
+    }       
+    .btnCerrar{
+        position: absolute;
+        right: 5px;
+        bottom: 10px;
     }
 
-    
-    /*se cambio el color #69D4CD del tasks-container a blanco*/
-}
 
-
-
-    .aquitermina {
+    .aquitermina{   
         color: #050f02;
     }
 }
