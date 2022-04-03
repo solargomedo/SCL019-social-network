@@ -2,8 +2,6 @@ import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvide
 import { app } from "../lib/firebase.js"
 import { register } from "./register.js";
 
-//import { auth } from "./register";
-
 export const home = () => {
   const userData = document.createElement('div');
   userData.setAttribute("class", "mainclass");
@@ -33,38 +31,38 @@ export const home = () => {
   ;
   userData.innerHTML = data;
 
-  //--------Evento boton para loguearse--------
+  //--------Evento boton para loguearse--------//
   let btonRegistro = userData.querySelector('#boton');
   btonRegistro.addEventListener('click', () => {
     login();
   });
 
-  //--------Evento boton para ingresar con Google------------
+  //--------Evento boton para ingresar con Google-------
   let btnGoogle = userData.querySelector('#botonGoogle');
   btnGoogle.addEventListener('click', () => {
     registerGoogle()
   });
 
-  //-------Evento para boton y direccionar a REGISTRATE y nos muestra html para ingresar datos-------------
+  //-------Evento para boton y direccionar a REGISTRATE y nos muestra html para ingresar datos-------
   let btn2 = userData.querySelector('#botonRegister');
   btn2.addEventListener('click', () => {
     register()
   });
 
+  //------Atributos de firebase -------------
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
 
-  //----Función para loguearse----------
+  //------Función para loguearse----------
   function login() {
     let email = document.getElementById("emailLogin").value;
     let password = document.getElementById("passwordLogin").value;
 
-    //Codigo traido de firebase
-    const auth = getAuth();
+    //-----Codigo traido de firebase------
+        const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
         //console.log(user);
         window.location.hash = 'post';
@@ -88,28 +86,30 @@ export const home = () => {
       });
   }
 
-  //Ingreso con google firebase
+  //----------Ingreso con google firebase---------//
   function registerGoogle() {
     //const auth = getAuth();
     signInWithPopup(auth, provider)
       .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
+        
+//------------ Esto le da un token de acceso de Google. Puede usarlo para acceder a la API de Google ----//
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        // The signed-in user info.
+        
+//----------La información del usuario registrado---------//
         const user = result.user;
 
         window.location.hash = 'post';
 
       }).catch((error) => {
-        // Handle Errors here.
+       // Manejar errores aquí--------//
         const errorCode = error.code;
         const errorMessage = error.message;
-        // The email of the user's account used.
+       // El correo electrónico de la cuenta de usuario utilizada----//
         const email = error.email;
-        // The AuthCredential type that was used.
+       // El tipo AuthCredential que se utilizó----------//
         const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
+        
       });
   }
   window.location.hash = 'home';
