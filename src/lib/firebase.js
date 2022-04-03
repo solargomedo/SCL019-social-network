@@ -1,7 +1,8 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-import { collection, addDoc, getFirestore, getDocs, onSnapshot, Timestamp} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"
 import { getAuth} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"
+import { collection, addDoc, getFirestore, getDocs, Timestamp} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBIqyphHuzt--s38OayJrvHpQl11oY8Fw0",
@@ -19,7 +20,7 @@ export const db = getFirestore(app);
 const auth = getAuth(app);
 
 
-// Add a new document with a generated id.
+// ------ Agregue un nuevo documento con una id generada-- firestore
 export const createPost = async (titulo, comentario) => {
   const date = Timestamp.fromDate(new Date());
   let userName;
@@ -28,7 +29,6 @@ export const createPost = async (titulo, comentario) => {
     userName = newName[0];
   } else {
     userName = auth.currentUser.displayName;
-
   }
 
   const docRef = await addDoc(collection(db, "post"), {
@@ -40,7 +40,7 @@ export const createPost = async (titulo, comentario) => {
     date: Date(Date.now()),
     });
   return docRef
-  console.log("Document written with ID: ", docRef.id);
+  //console.log("Document written with ID: ", docRef.id);
 }
 
 
