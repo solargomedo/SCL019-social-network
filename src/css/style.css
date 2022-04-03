@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     align-items: center;
     display: grid;
-	grid-gap: 1px;
+    grid-gap: 1px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(4, auto);
     grid-template-areas: "header header header"
@@ -108,7 +108,7 @@ p{
     visibility:hidden;
 }
 .imagen{
-    width: 12em;
+    width: 21.7em;
 }
 .img{
     width: 100%;
@@ -122,8 +122,15 @@ footer{
     border-radius: 5px;
     grid-area: footer;    
 }
+.mensajeErrorLogin{
+    font-size: 0.85em;
+    color:red;
+    position: absolute;
+    right: 5.7em;
+    top: 8.5em;
+}
 
-/*----hoja register------*/
+/*--------hoja register------*/
 .mainclassRegister{   
     background-color: white;    
     width: 100%;
@@ -131,6 +138,7 @@ footer{
     flex-direction: column;
     align-items: center;
     display: flex;
+    
 }
 .contenedorRegister{
     display: flex;
@@ -182,6 +190,13 @@ footer{
     height: 2 em;
     flex-direction: column-reverse;
     justify-content: center;
+}
+.mensajeErrorRegistro{
+    font-size: 0.85em;
+    color:red;
+    position: absolute;
+    right: 5.7em;
+    top: 8.5em;
 }
 
 /*------------hoja de post-----------------*/
@@ -327,6 +342,8 @@ footer{
         font-size: 16px;
     }
 	.mainclass{   
+        grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(2, auto);
         grid-template-areas: "ultimo ultimo contenedor "
 						    "footer footer footer";
     }
@@ -354,6 +371,10 @@ footer{
         font-size: 1.5em;
         visibility:visible;
     }
+    .mensajeErrorLogin{
+        right: 5em;
+        top: 10em;
+    }
     .mainclassRegister{   
         background-color: #fff;    
     }        
@@ -365,6 +386,10 @@ footer{
     .registerNameLogin{    
         border: none;
     }   
+    .mensajeErrorRegistro{
+        right: 31.5em;
+        top: 10em;
+    }
     .mainclasPost{
         padding: 2em;
         background-color: #69D4CD;
