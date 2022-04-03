@@ -424,7 +424,7 @@ margin-top: 2em;
 
     #tasks-container{
 
-        background-color: #69D4CD;
+        background-color: #fff;
         border-radius: 1em;
         width: 80%;
         height: 70%;
@@ -432,6 +432,6 @@ margin-top: 2em;
         margin-right: auto;
     }
     
-    
+    /*se cambio el color #69D4CD del tasks-container a blanco*/
 }
 
