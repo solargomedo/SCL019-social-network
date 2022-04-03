@@ -3,7 +3,7 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 30px;
     font-size: 12px;
-   }
+}
 .mainclass{   
     background-color: white;    
     width: 100%;
@@ -19,7 +19,6 @@ body{
 						 "ultimo ultimo ultimo "
 						 "footer footer footer";
 }
-
 .contenedor{
     display: flex;
     flex-direction: column;
@@ -46,9 +45,9 @@ body{
 h1{
     color: #ffff;
     font-size: 2em;
-    margin-top: 0.3em;
-    margin-left: 0.3em;
-    margin-right: 0.2em;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+    margin-right: 0.2rem;
 }
 .FormLogin{
     display: flex;
@@ -109,23 +108,21 @@ p{
     visibility:hidden;
 }
 .imagen{
-    width: 12.em;
+    width: 12em;
 }
 .img{
     width: 100%;
 }
 footer{
     background: #337c77;
-    /*opacity: 0.8;*/
     font-size: 0.8em; 
     color: white;
     padding: 0.2em;
     text-align: center; 
     border-radius: 5px;
-    grid-area: footer;
-    
-    
+    grid-area: footer;    
 }
+
 /*----hoja register------*/
 .mainclassRegister{   
     background-color: white;    
@@ -135,26 +132,19 @@ footer{
     align-items: center;
     display: flex;
 }
-    
 .contenedorRegister{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5em;
 }
-
 .contenedorRegister input, .botonRegister{
-
-margin-top: 2em;
-
+    margin-top: 2em;
 }
-
 .imagenRegister{
-
     width: 12.em;
     margin-top: 6em;
 }
-
 .modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
@@ -195,7 +185,6 @@ margin-top: 2em;
 }
 
 /*------------hoja de post-----------------*/
-
 .mainclasPost{
     display: grid;
 	grid-gap: 1px;
@@ -204,55 +193,48 @@ margin-top: 2em;
     grid-template-areas: "task-form task-form"
                         "tasks-container tasks-container";						 						 
 }
-
 #task-form{
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: task-form;
 }
-
-
 .btnCerrar{
     color: rgb(5, 5, 5);
     font-family: 'Satisfy', cursive;
     font-size: 0.8em;
-    border-radius: 1em;
-    align-items:flex-start;
-    margin-right: -30em;
-    padding: 0.6em;
+    border-radius: 1rem;
+    display: flex;
+    width: 6.5em;
+    text-align: center;
+    float: right;
+    margin-bottom: 2rem;
+    padding: 0.6rem;
     text-decoration: none;
     background-color: #e0eb4c;
     cursor: pointer;
     box-shadow: 0 0 10px #cedb5b, 0 0 40px #cedb5b, 0 0 80px #cedb5b;
-}
-
-    
+}    
 .nombrePost, .comentarioPost{
     background-color: white;
     opacity: 0.7;
     border-radius: 0.5em;
     padding: 0.62em;
     margin: 0.5em;
-    width: 15em;   
+    width: 13em;   
     align-items: center;
     flex-direction: column;
     display: flex;
 }
-
 #btn-task-save{
-
     background-color: white;
     opacity: 0.7;
     border-radius: 0.5em;
     padding: 0.62em;
     margin: 1em;
-    
-
 }
 
 /*-----------Diseño de contenedor de post-------------*/
-
 #tasks-container {
     width: 90%;
     height: 40em;
@@ -265,23 +247,19 @@ margin-top: 2em;
     flex-direction: column;
     align-items: center; 
     grid-area: tasks-container; 
-
-  }
+}
 
   /*------------Scroll Personalizado-------------- */
-  #tasks-container::-webkit-scrollbar {
+#tasks-container::-webkit-scrollbar {
     width: 1.25em;
     background: gainsboro;
     border-radius: 0.93em 2.5em 2.5em 0.93em;
-  }
-  
-  #tasks-container::-webkit-scrollbar-thumb {
+}
+#tasks-container::-webkit-scrollbar-thumb {
     background: rgb(231, 231, 82);
     border-radius: 2.18em;
-  }
-
-  .postPublicado{
-
+}
+.postPublicado{
     margin: 1em;
     background-color: white;
     opacity: 0.7;
@@ -291,18 +269,14 @@ margin-top: 2em;
     align-items: center;
     width: 16em;  
 }
-
 .postPublicado textarea{
-
     border: none;
     background-color: rgb(245, 245, 8);
 }
-
 .fecha{
     font-weight: lighter;
     font-size: 0.8em;
 }
-
 .nombreUsuario{
     font-weight: bold;
     text-align: center;
@@ -310,12 +284,9 @@ margin-top: 2em;
 }
 .titlePost{
     font-weight: bold;
-    text-align: center;
-    
-    
+    text-align: center;       
 }
 .commentDone{
-
     background-color: white;
     opacity: 0.9;
     border-radius: 1.10em;
@@ -337,34 +308,18 @@ margin-top: 2em;
 }
 .iconoImg{
     width: 9%;
-    margin-right: 8em;
-    
+    margin-right: 8em;    
 }
+
+
+ 
 @media screen and (min-width: 425px){
     body{            
         font-size: 14px;
     }
+}  
 
-	/* .mainclass{   
-        grid-template-areas: "ultimo ultimo contenedor "
-						    "footer footer footer";
-
-    }
-    .contenedor{
-        background-color: #69D4CD;
-        border-radius: 3em;
-        padding: 2em;
-    }
-
-    .ultimo{
-        display: inline-block;
-        align-content: center;
-        height: 70vh;
-	         
-    }   */
-
-    
-  
+/*------------Medidas visualizacion escritorio -------------- */
 @media screen and (min-width: 768px){
     body{
         background-color: white;
@@ -393,28 +348,20 @@ margin-top: 2em;
         display: inline-block;
         align-content: center;
         height: 80vh;
-    }  
-    
+    }      
     .ultimo h4{
         text-align: center;
         font-size: 1.5em;
         visibility:visible;
     }
-
-
     .mainclassRegister{   
-        background-color: #fff
-        
-       
-        
-    }
-        
+        background-color: #fff;    
+    }        
     .contenedorRegister{
         background-color: #69D4CD;
         border-radius: 1em;
         padding: 3em;
-    }
-    
+    }    
     .registerNameLogin{    
         border: none;
     }   
@@ -425,7 +372,6 @@ margin-top: 2em;
         grid-template-areas: "task-form tasks-container"
                              "task-form tasks-container";
     }
-
     #task-form{
         background-color: #fff;
         padding: 1.5em;
@@ -433,25 +379,20 @@ margin-top: 2em;
         height: 60%;
         border-radius: 1em;
         margin-left: auto;
-        margin-right: auto;   
+        margin-right: auto; 
+        position: relative;  
     }
-
     #tasks-container{
-
         background-color: #69D4CD;
         border-radius: 1em;
         width: 80%;
         height: 70%;
         margin-left: auto;
         margin-right: auto;
+    }       
+    .btnCerrar{
+        position: absolute;
+        right: 5px;
+        bottom: 10px;
     }
-    
-        
-        
 }
-
-
-        
-
-
-    }

@@ -5,7 +5,7 @@ Te Apaño! es una red social orientada a personas que que entrenan constante men
 ###  Realizacion del Proyecto
 Investigación de usuario
 
-para determinar a nuestro público objetivo realizamos un formulario de preguntas con alternativas,con el cual definimos,siguiente perfil de usuario:
+Para determinar a nuestro público objetivo realizamos un formulario de preguntas con alternativas en el cual definimos el siguiente perfil de usuario:
 
    * la mayoria se motiva entrenando acompañada.
    * les gustaria encontrar un partner para entrenar 
@@ -22,10 +22,10 @@ Para elegir adecuadamente las características principales que debía tener nues
 Yo como usuario nuevo quiero registrarme para ingresar a la red social, o ingresar con mi cuenta de google.
 
 ### Historia de Usuario: 2
-Yo como usuario ya registrado quiero ingresar.
+Yo como usuario ya registrado quiero ingresar para poder crear un post.
 
 ### Historia de Usuario: 3
-Yo como Usuario quiero crear, editar, borrar y "likear" publicaciones.
+Yo como Usuario quiero crear, editar, borrar y "likear" publicaciones para interactuar en la app.
 
 Estas historias de usuario las organizamos de forma colaborativa mediante trello. 
 
@@ -34,7 +34,7 @@ Realizamos un prototipo de baja fidelidad y un prototipo de alta fidelidad para 
 ![Imagen-baja-fidelidad](src/Imagenes/Baja-fidelidad.jpg) 
 ### falta imagen alta fidelidad
 
-Verificamos que nuestra aplicacion, realizando test de usabilidad, nos dieron feedback en funciones, mensajes, diseño, lo cual nos ayudo a corregir nuestro codigo. Ayudandonos a mejorar.
+Verificamos que nuestra aplicacion realizando test de usabilidad, nos dieron feedback en funciones, mensajes y diseño lo cual nos ayudo a corregir nuestro codigo, ayudandonos a mejorar.
 
 ![Imagen-alta-figma](src/Imagenes/prototipo-alta.jpg) 
 ![Imagen-baja-figma](src/Imagenes/vista-escritorio.png)
