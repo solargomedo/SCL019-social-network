@@ -43,17 +43,3 @@ export const createPost = async (titulo, comentario) => {
   //console.log("Document written with ID: ", docRef.id);
 }
 
-
-
-export const getTask = async (id) => {
-  return await getDocs(collection(db, 'post'));
-}
- 
-export const onGetTask = () => {
-
-}
-export const updatePost = (id, newFields) => updateDoc(doc(db, "post", id), newFields);
-
-
-;
-

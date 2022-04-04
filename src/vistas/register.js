@@ -83,7 +83,7 @@ function registroUsuario() {
       if (errorCode === 'auth/invalid-email') {
         root.querySelector("#mensajeErrorRegistro").innerHTML = "Email Invalido";
 
-       //---Ingrese email--
+       //---si no esta ingresado el corro, arroja mensaje--
       } else if (errorCode === 'auth/missing-email') {
         root.querySelector("#mensajeErrorRegistro").innerHTML = "Ingresar Email";
 

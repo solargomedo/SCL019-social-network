@@ -95,10 +95,9 @@ export const home = () => {
 //------------ Esto le da un token de acceso de Google. Puede usarlo para acceder a la API de Google ----//
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        
+       
 //----------La información del usuario registrado---------//
         const user = result.user;
-
         window.location.hash = 'post';
 
       }).catch((error) => {
