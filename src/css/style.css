@@ -108,7 +108,7 @@ p{
     visibility:hidden;
 }
 .imagen{
-    width: 21.7em;
+    width: 100%;
 }
 .img{
     width: 100%;
@@ -117,7 +117,7 @@ footer{
     background: #337c77;
     font-size: 0.8em; 
     color: white;
-    padding: 0.2em;
+    padding: 0.2rem;
     text-align: center; 
     border-radius: 5px;
     grid-area: footer;    
@@ -373,7 +373,7 @@ footer{
     }
     .mensajeErrorLogin{
         right: 5em;
-        top: 10em;
+        top: 11em;
     }
     .mainclassRegister{   
         background-color: #fff;    
@@ -387,7 +387,7 @@ footer{
         border: none;
     }   
     .mensajeErrorRegistro{
-        right: 31.5em;
+        right: 30em;
         top: 10em;
     }
     .mainclasPost{

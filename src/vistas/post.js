@@ -56,8 +56,7 @@ export const post = () => {
               <img class="imgIcono" src="../Imagenes/Editars.png">
               <img class="imgIcono" src="../Imagenes/Papelera.png">
               </div>
-            </div>
-            `;
+            </div>`;
       })
       newContainer.innerHTML = html
     })
@@ -65,7 +64,6 @@ export const post = () => {
   newAllPost()
 
   return dataPost
-
 }
 
 
